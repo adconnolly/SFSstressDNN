@@ -1,0 +1,1474 @@
+/glade/work/adac/DNStoLES/CN_paperRuns/C4-midReGridInterp-stats.py:188: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig1 = plt.figure(figsize = (20, 6))
+cuda
+C4_midReGridInterp_stats_4x1026Re1800_4x40104Re1800_
+Train Files:
+<xarray.Dataset> Size: 692MB
+Dimensions:  (z: 128, y: 64, x: 64, time: 15)
+Coordinates:
+  * z        (z) float64 1kB 0.2824 0.4236 0.5648 0.706 ... 17.93 18.07 18.22
+  * y        (y) float64 512B 0.214 0.6419 1.07 1.498 ... 26.32 26.74 27.17
+  * x        (x) float64 512B 0.214 0.6419 1.07 1.498 ... 26.32 26.74 27.17
+  * time     (time) int64 120B 616000 617000 618000 ... 628000 629000 630000
+Data variables:
+    u        (z, y, x, time) float64 63MB ...
+    v        (z, y, x, time) float64 63MB ...
+    w        (z, y, x, time) float64 63MB ...
+    tau11    (z, y, x, time) float64 63MB ...
+    tau22    (z, y, x, time) float64 63MB ...
+    tau33    (z, y, x, time) float64 63MB ...
+    tau12    (z, y, x, time) float64 63MB ...
+    tau13    (z, y, x, time) float64 63MB ...
+    tau23    (z, y, x, time) float64 63MB ...
+    b        (z, y, x, time) float64 63MB ...
+    p        (z, y, x, time) float64 63MB ...
+<xarray.Dataset> Size: 11MB
+Dimensions:  (z: 32, y: 16, x: 16, time: 15)
+Coordinates:
+  * z        (z) float64 256B 1.13 1.695 2.259 2.824 ... 16.95 17.51 18.07 18.64
+  * y        (y) float64 128B 0.8558 2.567 4.279 5.991 ... 23.11 24.82 26.53
+  * x        (x) float64 128B 0.8558 2.567 4.279 5.991 ... 23.11 24.82 26.53
+  * time     (time) int64 120B 616000 617000 618000 ... 628000 629000 630000
+Data variables:
+    u        (z, y, x, time) float64 983kB ...
+    v        (z, y, x, time) float64 983kB ...
+    w        (z, y, x, time) float64 983kB ...
+    tau11    (z, y, x, time) float64 983kB ...
+    tau22    (z, y, x, time) float64 983kB ...
+    tau33    (z, y, x, time) float64 983kB ...
+    tau12    (z, y, x, time) float64 983kB ...
+    tau13    (z, y, x, time) float64 983kB ...
+    tau23    (z, y, x, time) float64 983kB ...
+    b        (z, y, x, time) float64 983kB ...
+    p        (z, y, x, time) float64 983kB ...
+output shape is (228699, 6)
+input shape should be (228699, 4, 3, 3, 3)
+run #0
+horiz. vel train stdev: 0.0007892347944423413
+vert. vel train stdev: 9.633455154448652e-05
+buoyancy train stdev: 0.00011227425053252505
+Tau_h train stdev: 5.03246145277189e-06
+Tau_i3 train stdev: 8.421601561201908e-08
+Tau_33 train stdev: 8.256753637107036e-08
+Test Files:
+<xarray.Dataset> Size: 110MB
+Dimensions:  (z: 64, y: 32, x: 32, time: 15)
+Coordinates:
+  * z        (z) float64 512B 0.5648 0.8473 1.13 1.412 ... 17.79 18.07 18.36
+  * y        (y) float64 256B 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * x        (x) float64 256B 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * time     (time) int64 120B 616000 617000 618000 ... 628000 629000 630000
+Data variables: (12/14)
+    u        (z, y, x, time) float64 8MB ...
+    v        (z, y, x, time) float64 8MB ...
+    w        (z, y, x, time) float64 8MB ...
+    tau11    (z, y, x, time) float64 8MB ...
+    tau22    (z, y, x, time) float64 8MB ...
+    tau33    (z, y, x, time) float64 8MB ...
+    ...       ...
+    tau23    (z, y, x, time) float64 8MB ...
+    b        (z, y, x, time) float64 8MB ...
+    ub       (z, y, x, time) float64 8MB ...
+    vb       (z, y, x, time) float64 8MB ...
+    wb       (z, y, x, time) float64 8MB ...
+    p        (z, y, x, time) float64 8MB ...
+output shape is (282196, 6)
+input shape should be (282196, 4, 3, 3, 3)
+Lossweights:
+[  205638.43867645   858216.20985837 11305268.37130199   855212.98464086
+ 13888677.07150572 12111297.53836734]
+0
+[0.01]
+LR:  None
+train loss: 0.22810494156679936
+validation loss: 0.3249500407296349
+test loss: 0.3233651609994136
+1
+[0.001]
+LR:  None
+train loss: 0.21548858010486427
+validation loss: 0.32079188965024835
+test loss: 0.3193867293014893
+2
+[0.0001]
+LR:  None
+train loss: 0.21366793867971956
+validation loss: 0.3211467752216668
+test loss: 0.31974988282762
+3
+[0.0001]
+LR:  None
+train loss: 0.21286078438101522
+validation loss: 0.3194125904279601
+test loss: 0.3180380511385498
+4
+[0.0001]
+LR:  None
+train loss: 0.21202706544107716
+validation loss: 0.3207305970578204
+test loss: 0.3193696640404941
+5
+[0.0001]
+LR:  None
+train loss: 0.21133292531872022
+validation loss: 0.32210654093422725
+test loss: 0.32075447440296034
+6
+[0.0001]
+LR:  None
+train loss: 0.21061670273648045
+validation loss: 0.32219654604549003
+test loss: 0.32085298192440026
+7
+[0.0001]
+LR:  None
+train loss: 0.20985245785698434
+validation loss: 0.32386447584891626
+test loss: 0.3225302581973667
+8
+[0.0001]
+LR:  None
+train loss: 0.20924287690450077
+validation loss: 0.32548091782479066
+test loss: 0.3241607680024429
+9
+[0.0001]
+LR:  None
+train loss: 0.2084783633267771
+validation loss: 0.3230253847290961
+test loss: 0.321676635528198
+10
+[0.0001]
+LR:  None
+train loss: 0.20764184117696055
+validation loss: 0.3235272627290123
+test loss: 0.32226242624273727
+11
+[0.0001]
+LR:  None
+train loss: 0.2069131063796439
+validation loss: 0.3261497508689323
+test loss: 0.32482783430014245
+12
+[0.0001]
+LR:  None
+train loss: 0.20627480235654652
+validation loss: 0.32587468375526746
+test loss: 0.32457337344518056
+13
+[0.0001]
+LR:  None
+train loss: 0.20571461671410923
+validation loss: 0.3244950338022748
+test loss: 0.32320093506014236
+14
+[0.0001]
+LR:  None
+train loss: 0.20507835639788868
+validation loss: 0.3252734138776803
+test loss: 0.32396308537965035
+15
+[0.0001]
+LR:  None
+train loss: 0.20453856872677104
+validation loss: 0.32777000270892703
+test loss: 0.3265022120526872
+16
+[0.0001]
+LR:  None
+train loss: 0.20363577946067865
+validation loss: 0.32905000375588717
+test loss: 0.3277403680548528
+17
+[0.0001]
+LR:  None
+train loss: 0.20323613871358986
+validation loss: 0.32867316090326515
+test loss: 0.32739872672700265
+18
+[0.0001]
+LR:  None
+train loss: 0.20238807781855142
+validation loss: 0.32915206991166535
+test loss: 0.3278096030675086
+19
+[0.0001]
+LR:  None
+train loss: 0.20199391339103293
+validation loss: 0.33221694535322416
+test loss: 0.33093760994312843
+20
+[0.0001]
+LR:  None
+train loss: 0.2012920428434505
+validation loss: 0.3323833011168983
+test loss: 0.3311765792975453
+21
+[0.0001]
+LR:  None
+train loss: 0.20089383545734357
+validation loss: 0.3304621617126275
+test loss: 0.3292062438349498
+22
+[0.0001]
+LR:  None
+train loss: 0.20031547625727167
+validation loss: 0.33243392459784304
+test loss: 0.331138155526136
+23
+[0.0001]
+LR:  None
+train loss: 0.19965191459462323
+validation loss: 0.3326940145280122
+test loss: 0.3314396528540809
+ES epoch: 3
+Test data
+Skills for tau_11
+R^2: 0.8556
+Correlation: 0.9730
+
+Skills for tau_12
+R^2: 0.7097
+Correlation: 0.8436
+
+Skills for tau_13
+R^2: 0.6990
+Correlation: 0.8652
+
+Skills for tau_22
+R^2: 0.6747
+Correlation: 0.8643
+
+Skills for tau_23
+R^2: 0.6328
+Correlation: 0.8185
+
+Skills for tau_33
+R^2: 0.4687
+Correlation: 0.8010
+
+Validation data
+Skills for tau_11
+R^2: 0.8552
+Correlation: 0.9734
+
+Skills for tau_12
+R^2: 0.7056
+Correlation: 0.8407
+
+Skills for tau_13
+R^2: 0.7019
+Correlation: 0.8669
+
+Skills for tau_22
+R^2: 0.6727
+Correlation: 0.8619
+
+Skills for tau_23
+R^2: 0.6302
+Correlation: 0.8164
+
+Skills for tau_33
+R^2: 0.4675
+Correlation: 0.7997
+
+Train data
+Skills for tau_11
+R^2: 0.9872
+Correlation: 0.9939
+
+Skills for tau_12
+R^2: 0.9638
+Correlation: 0.9820
+
+Skills for tau_13
+R^2: 0.7698
+Correlation: 0.8799
+
+Skills for tau_22
+R^2: 0.9158
+Correlation: 0.9581
+
+Skills for tau_23
+R^2: 0.7011
+Correlation: 0.8398
+
+Skills for tau_33
+R^2: 0.7580
+Correlation: 0.8761
+
+Train Files:
+<xarray.Dataset> Size: 692MB
+Dimensions:  (z: 128, y: 64, x: 64, time: 15)
+Coordinates:
+  * z        (z) float64 1kB 0.2824 0.4236 0.5648 0.706 ... 17.93 18.07 18.22
+  * y        (y) float64 512B 0.214 0.6419 1.07 1.498 ... 26.32 26.74 27.17
+  * x        (x) float64 512B 0.214 0.6419 1.07 1.498 ... 26.32 26.74 27.17
+  * time     (time) int64 120B 616000 617000 618000 ... 628000 629000 630000
+Data variables:
+    u        (z, y, x, time) float64 63MB ...
+    v        (z, y, x, time) float64 63MB ...
+    w        (z, y, x, time) float64 63MB ...
+    tau11    (z, y, x, time) float64 63MB ...
+    tau22    (z, y, x, time) float64 63MB ...
+    tau33    (z, y, x, time) float64 63MB ...
+    tau12    (z, y, x, time) float64 63MB ...
+    tau13    (z, y, x, time) float64 63MB ...
+    tau23    (z, y, x, time) float64 63MB ...
+    b        (z, y, x, time) float64 63MB ...
+    p        (z, y, x, time) float64 63MB ...
+<xarray.Dataset> Size: 11MB
+Dimensions:  (z: 32, y: 16, x: 16, time: 15)
+Coordinates:
+  * z        (z) float64 256B 1.13 1.695 2.259 2.824 ... 16.95 17.51 18.07 18.64
+  * y        (y) float64 128B 0.8558 2.567 4.279 5.991 ... 23.11 24.82 26.53
+  * x        (x) float64 128B 0.8558 2.567 4.279 5.991 ... 23.11 24.82 26.53
+  * time     (time) int64 120B 616000 617000 618000 ... 628000 629000 630000
+Data variables:
+    u        (z, y, x, time) float64 983kB ...
+    v        (z, y, x, time) float64 983kB ...
+    w        (z, y, x, time) float64 983kB ...
+    tau11    (z, y, x, time) float64 983kB ...
+    tau22    (z, y, x, time) float64 983kB ...
+    tau33    (z, y, x, time) float64 983kB ...
+    tau12    (z, y, x, time) float64 983kB ...
+    tau13    (z, y, x, time) float64 983kB ...
+    tau23    (z, y, x, time) float64 983kB ...
+    b        (z, y, x, time) float64 983kB ...
+    p        (z, y, x, time) float64 983kB ...
+output shape is (228963, 6)
+input shape should be (228963, 4, 3, 3, 3)
+run #1
+horiz. vel train stdev: 0.0007856003964693837
+vert. vel train stdev: 9.626311482720593e-05
+buoyancy train stdev: 0.00011222619479382615
+Tau_h train stdev: 4.977714855733835e-06
+Tau_i3 train stdev: 8.376463606623734e-08
+Tau_33 train stdev: 8.253942750623805e-08
+Test Files:
+<xarray.Dataset> Size: 110MB
+Dimensions:  (z: 64, y: 32, x: 32, time: 15)
+Coordinates:
+  * z        (z) float64 512B 0.5648 0.8473 1.13 1.412 ... 17.79 18.07 18.36
+  * y        (y) float64 256B 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * x        (x) float64 256B 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * time     (time) int64 120B 616000 617000 618000 ... 628000 629000 630000
+Data variables: (12/14)
+    u        (z, y, x, time) float64 8MB ...
+    v        (z, y, x, time) float64 8MB ...
+    w        (z, y, x, time) float64 8MB ...
+    tau11    (z, y, x, time) float64 8MB ...
+    tau22    (z, y, x, time) float64 8MB ...
+    tau33    (z, y, x, time) float64 8MB ...
+    ...       ...
+    tau23    (z, y, x, time) float64 8MB ...
+    b        (z, y, x, time) float64 8MB ...
+    ub       (z, y, x, time) float64 8MB ...
+    vb       (z, y, x, time) float64 8MB ...
+    wb       (z, y, x, time) float64 8MB ...
+    p        (z, y, x, time) float64 8MB ...
+output shape is (283350, 6)
+input shape should be (283350, 4, 3, 3, 3)
+Lossweights:
+[  208018.8915   866025.0961 11378272.9914   855011.89   13873867.0302 12115422.05  ]
+0
+[0.01]
+LR:  None
+train loss: 0.23840315707606272
+validation loss: 0.32376220404557643
+test loss: 0.3241310747546364
+1
+[0.001]
+LR:  None
+train loss: 0.21784680236992165
+validation loss: 0.31802708721072565
+test loss: 0.318172731085953
+2
+[0.0001]
+LR:  None
+train loss: 0.21602465232795523
+validation loss: 0.3181594204876135
+test loss: 0.31840958255876123
+3
+[0.0001]
+LR:  None
+train loss: 0.21497827143325157
+validation loss: 0.3178785934615058
+test loss: 0.3183684924751008
+4
+[0.0001]
+LR:  None
+train loss: 0.21406639809126893
+validation loss: 0.31907436158991037
+test loss: 0.31918884736527975
+5
+[0.0001]
+LR:  None
+train loss: 0.2131704007581518
+validation loss: 0.32114611019896006
+test loss: 0.32150055105857595
+6
+[0.0001]
+LR:  None
+train loss: 0.21215939326734262
+validation loss: 0.3205222398773154
+test loss: 0.320802275865036
+7
+[0.0001]
+LR:  None
+train loss: 0.2111125813166786
+validation loss: 0.3212401790729368
+test loss: 0.32138755256954094
+8
+[0.0001]
+LR:  None
+train loss: 0.21025026713988937
+validation loss: 0.3226131111197356
+test loss: 0.32295855158833836
+9
+[0.0001]
+LR:  None
+train loss: 0.2095716175738858
+validation loss: 0.3233114392090794
+test loss: 0.3233791088339414
+10
+[0.0001]
+LR:  None
+train loss: 0.20865325758288233
+validation loss: 0.3256036143891964
+test loss: 0.3256532271846212
+11
+[0.0001]
+LR:  None
+train loss: 0.20782083652789216
+validation loss: 0.322519865860402
+test loss: 0.3225424965543731
+12
+[0.0001]
+LR:  None
+train loss: 0.20712048261601332
+validation loss: 0.3261291613424469
+test loss: 0.3260768907453926
+13
+[0.0001]
+LR:  None
+train loss: 0.2064132356066178
+validation loss: 0.32515668317860197
+test loss: 0.32534555600955345
+14
+[0.0001]
+LR:  None
+train loss: 0.2057258788258056
+validation loss: 0.32530670412346663
+test loss: 0.3257042416923139
+15
+[0.0001]
+LR:  None
+train loss: 0.205090068105237
+validation loss: 0.32676668274484866
+test loss: 0.32671495187679717
+16
+[0.0001]
+LR:  None
+train loss: 0.20463045856379686
+validation loss: 0.3283073477248175
+test loss: 0.32852812976558565
+17
+[0.0001]
+LR:  None
+train loss: 0.20375422834799575
+validation loss: 0.3286554879261862
+test loss: 0.3289945241076017
+18
+[0.0001]
+LR:  None
+train loss: 0.20331213337315202
+validation loss: 0.32764210541662686
+test loss: 0.3280107793870009
+19
+[0.0001]
+LR:  None
+train loss: 0.20276879879683465
+validation loss: 0.331534640688972
+test loss: 0.33167375702023244
+20
+[0.0001]
+LR:  None
+train loss: 0.2021357231540973
+validation loss: 0.32798784105694784
+test loss: 0.3279879922543204
+21
+[0.0001]
+LR:  None
+train loss: 0.20158720618787346
+validation loss: 0.3298627230646317
+test loss: 0.3301664512883518
+22
+[0.0001]
+LR:  None
+train loss: 0.2012782773890884
+validation loss: 0.33055564792516734
+test loss: 0.33066639838291706
+23
+[0.0001]
+LR:  None
+train loss: 0.2005946201136028
+validation loss: 0.32868521972975273
+test loss: 0.3288856889578958
+ES epoch: 3
+Test data
+Skills for tau_11
+R^2: 0.8642
+Correlation: 0.9739
+
+Skills for tau_12
+R^2: 0.6863
+Correlation: 0.8289
+
+Skills for tau_13
+R^2: 0.7100
+Correlation: 0.8705
+
+Skills for tau_22
+R^2: 0.6627
+Correlation: 0.8640
+
+Skills for tau_23
+R^2: 0.6377
+Correlation: 0.8210
+
+Skills for tau_33
+R^2: 0.4864
+Correlation: 0.7998
+
+Validation data
+Skills for tau_11
+R^2: 0.8647
+Correlation: 0.9739
+
+Skills for tau_12
+R^2: 0.6797
+Correlation: 0.8249
+
+Skills for tau_13
+R^2: 0.7115
+Correlation: 0.8704
+
+Skills for tau_22
+R^2: 0.6628
+Correlation: 0.8644
+
+Skills for tau_23
+R^2: 0.6344
+Correlation: 0.8185
+
+Skills for tau_33
+R^2: 0.4879
+Correlation: 0.8005
+
+Train data
+Skills for tau_11
+R^2: 0.9867
+Correlation: 0.9934
+
+Skills for tau_12
+R^2: 0.9627
+Correlation: 0.9812
+
+Skills for tau_13
+R^2: 0.7568
+Correlation: 0.8717
+
+Skills for tau_22
+R^2: 0.9178
+Correlation: 0.9585
+
+Skills for tau_23
+R^2: 0.6930
+Correlation: 0.8365
+
+Skills for tau_33
+R^2: 0.7432
+Correlation: 0.8683
+
+Train Files:
+<xarray.Dataset> Size: 692MB
+Dimensions:  (z: 128, y: 64, x: 64, time: 15)
+Coordinates:
+  * z        (z) float64 1kB 0.2824 0.4236 0.5648 0.706 ... 17.93 18.07 18.22
+  * y        (y) float64 512B 0.214 0.6419 1.07 1.498 ... 26.32 26.74 27.17
+  * x        (x) float64 512B 0.214 0.6419 1.07 1.498 ... 26.32 26.74 27.17
+  * time     (time) int64 120B 616000 617000 618000 ... 628000 629000 630000
+Data variables:
+    u        (z, y, x, time) float64 63MB ...
+    v        (z, y, x, time) float64 63MB ...
+    w        (z, y, x, time) float64 63MB ...
+    tau11    (z, y, x, time) float64 63MB ...
+    tau22    (z, y, x, time) float64 63MB ...
+    tau33    (z, y, x, time) float64 63MB ...
+    tau12    (z, y, x, time) float64 63MB ...
+    tau13    (z, y, x, time) float64 63MB ...
+    tau23    (z, y, x, time) float64 63MB ...
+    b        (z, y, x, time) float64 63MB ...
+    p        (z, y, x, time) float64 63MB ...
+<xarray.Dataset> Size: 11MB
+Dimensions:  (z: 32, y: 16, x: 16, time: 15)
+Coordinates:
+  * z        (z) float64 256B 1.13 1.695 2.259 2.824 ... 16.95 17.51 18.07 18.64
+  * y        (y) float64 128B 0.8558 2.567 4.279 5.991 ... 23.11 24.82 26.53
+  * x        (x) float64 128B 0.8558 2.567 4.279 5.991 ... 23.11 24.82 26.53
+  * time     (time) int64 120B 616000 617000 618000 ... 628000 629000 630000
+Data variables:
+    u        (z, y, x, time) float64 983kB ...
+    v        (z, y, x, time) float64 983kB ...
+    w        (z, y, x, time) float64 983kB ...
+    tau11    (z, y, x, time) float64 983kB ...
+    tau22    (z, y, x, time) float64 983kB ...
+    tau33    (z, y, x, time) float64 983kB ...
+    tau12    (z, y, x, time) float64 983kB ...
+    tau13    (z, y, x, time) float64 983kB ...
+    tau23    (z, y, x, time) float64 983kB ...
+    b        (z, y, x, time) float64 983kB ...
+    p        (z, y, x, time) float64 983kB ...
+output shape is (228853, 6)
+input shape should be (228853, 4, 3, 3, 3)
+run #2
+horiz. vel train stdev: 0.0007843131553115769
+vert. vel train stdev: 9.61635893554572e-05
+buoyancy train stdev: 0.00011221015251579831
+Tau_h train stdev: 4.9561924381481604e-06
+Tau_i3 train stdev: 8.345411265455507e-08
+Tau_33 train stdev: 8.247927204627165e-08
+Test Files:
+<xarray.Dataset> Size: 110MB
+Dimensions:  (z: 64, y: 32, x: 32, time: 15)
+Coordinates:
+  * z        (z) float64 512B 0.5648 0.8473 1.13 1.412 ... 17.79 18.07 18.36
+  * y        (y) float64 256B 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * x        (x) float64 256B 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * time     (time) int64 120B 616000 617000 618000 ... 628000 629000 630000
+Data variables: (12/14)
+    u        (z, y, x, time) float64 8MB ...
+    v        (z, y, x, time) float64 8MB ...
+    w        (z, y, x, time) float64 8MB ...
+    tau11    (z, y, x, time) float64 8MB ...
+    tau22    (z, y, x, time) float64 8MB ...
+    tau33    (z, y, x, time) float64 8MB ...
+    ...       ...
+    tau23    (z, y, x, time) float64 8MB ...
+    b        (z, y, x, time) float64 8MB ...
+    ub       (z, y, x, time) float64 8MB ...
+    vb       (z, y, x, time) float64 8MB ...
+    wb       (z, y, x, time) float64 8MB ...
+    p        (z, y, x, time) float64 8MB ...
+output shape is (282218, 6)
+input shape should be (282218, 4, 3, 3, 3)
+Lossweights:
+[  209021.3874   865266.2596 11420744.8817   855364.5916 13901220.0093 12124258.3159]
+0
+[0.01]
+LR:  None
+train loss: 0.22386172072747682
+validation loss: 0.3439010848590218
+test loss: 0.3432159101978044
+1
+[0.001]
+LR:  None
+train loss: 0.20764394919831292
+validation loss: 0.3382885163576732
+test loss: 0.33818917552697597
+2
+[0.0001]
+LR:  None
+train loss: 0.20571613461960195
+validation loss: 0.34240195419833663
+test loss: 0.3420141988868465
+3
+[0.0001]
+LR:  None
+train loss: 0.20511639144204602
+validation loss: 0.34273390871306736
+test loss: 0.34227862900954165
+4
+[0.0001]
+LR:  None
+train loss: 0.2044095513556648
+validation loss: 0.34393459028023526
+test loss: 0.34327176317754493
+5
+[0.0001]
+LR:  None
+train loss: 0.20383734001644752
+validation loss: 0.34454255233751935
+test loss: 0.3437684705532837
+6
+[0.0001]
+LR:  None
+train loss: 0.20316400888142402
+validation loss: 0.342172354663633
+test loss: 0.3421156935600206
+7
+[0.0001]
+LR:  None
+train loss: 0.20259216254397547
+validation loss: 0.3410969984820895
+test loss: 0.3410536743601361
+8
+[0.0001]
+LR:  None
+train loss: 0.20181991483195133
+validation loss: 0.3442820500129516
+test loss: 0.34416398066816173
+9
+[0.0001]
+LR:  None
+train loss: 0.201261518821344
+validation loss: 0.34733995075142177
+test loss: 0.34671835667077877
+10
+[0.0001]
+LR:  None
+train loss: 0.20058475186743588
+validation loss: 0.3441508513113861
+test loss: 0.3431032320335814
+11
+[0.0001]
+LR:  None
+train loss: 0.19999208740299323
+validation loss: 0.345546939297969
+test loss: 0.3455245530765897
+12
+[0.0001]
+LR:  None
+train loss: 0.19923703391067776
+validation loss: 0.3474655780822806
+test loss: 0.34703572876398653
+13
+[0.0001]
+LR:  None
+train loss: 0.19862388967103065
+validation loss: 0.34404742145594336
+test loss: 0.3438772899597786
+14
+[0.0001]
+LR:  None
+train loss: 0.1980022181308315
+validation loss: 0.34804434129457695
+test loss: 0.34774251839449505
+15
+[0.0001]
+LR:  None
+train loss: 0.19747212430154648
+validation loss: 0.3480377473544683
+test loss: 0.3478049356314345
+16
+[0.0001]
+LR:  None
+train loss: 0.19677961082505155
+validation loss: 0.3492984593770826
+test loss: 0.34935119363948824
+17
+[0.0001]
+LR:  None
+train loss: 0.19620810413565876
+validation loss: 0.3473761822637782
+test loss: 0.34690340331782726
+18
+[0.0001]
+LR:  None
+train loss: 0.1957234718654586
+validation loss: 0.3499708199400094
+test loss: 0.3492506343253742
+19
+[0.0001]
+LR:  None
+train loss: 0.19505805980120336
+validation loss: 0.34946214644414036
+test loss: 0.34885082195021966
+20
+[0.0001]
+LR:  None
+train loss: 0.1949520733136852
+validation loss: 0.34599603607522095
+test loss: 0.3458578290118943
+21
+[0.0001]
+LR:  None
+train loss: 0.19407310558247434
+validation loss: 0.35218092046211436
+test loss: 0.3516437852764261
+ES epoch: 1
+Test data
+Skills for tau_11
+R^2: 0.8175
+Correlation: 0.9722
+
+Skills for tau_12
+R^2: 0.6762
+Correlation: 0.8292
+
+Skills for tau_13
+R^2: 0.7008
+Correlation: 0.8677
+
+Skills for tau_22
+R^2: 0.6102
+Correlation: 0.8569
+
+Skills for tau_23
+R^2: 0.6259
+Correlation: 0.8165
+
+Skills for tau_33
+R^2: 0.3512
+Correlation: 0.7883
+
+Validation data
+Skills for tau_11
+R^2: 0.8193
+Correlation: 0.9719
+
+Skills for tau_12
+R^2: 0.6781
+Correlation: 0.8297
+
+Skills for tau_13
+R^2: 0.7015
+Correlation: 0.8675
+
+Skills for tau_22
+R^2: 0.6104
+Correlation: 0.8572
+
+Skills for tau_23
+R^2: 0.6230
+Correlation: 0.8141
+
+Skills for tau_33
+R^2: 0.3503
+Correlation: 0.7877
+
+Train data
+Skills for tau_11
+R^2: 0.9849
+Correlation: 0.9934
+
+Skills for tau_12
+R^2: 0.9628
+Correlation: 0.9818
+
+Skills for tau_13
+R^2: 0.7663
+Correlation: 0.8766
+
+Skills for tau_22
+R^2: 0.9267
+Correlation: 0.9644
+
+Skills for tau_23
+R^2: 0.6970
+Correlation: 0.8367
+
+Skills for tau_33
+R^2: 0.7798
+Correlation: 0.8876
+
+Train Files:
+<xarray.Dataset> Size: 692MB
+Dimensions:  (z: 128, y: 64, x: 64, time: 15)
+Coordinates:
+  * z        (z) float64 1kB 0.2824 0.4236 0.5648 0.706 ... 17.93 18.07 18.22
+  * y        (y) float64 512B 0.214 0.6419 1.07 1.498 ... 26.32 26.74 27.17
+  * x        (x) float64 512B 0.214 0.6419 1.07 1.498 ... 26.32 26.74 27.17
+  * time     (time) int64 120B 616000 617000 618000 ... 628000 629000 630000
+Data variables:
+    u        (z, y, x, time) float64 63MB ...
+    v        (z, y, x, time) float64 63MB ...
+    w        (z, y, x, time) float64 63MB ...
+    tau11    (z, y, x, time) float64 63MB ...
+    tau22    (z, y, x, time) float64 63MB ...
+    tau33    (z, y, x, time) float64 63MB ...
+    tau12    (z, y, x, time) float64 63MB ...
+    tau13    (z, y, x, time) float64 63MB ...
+    tau23    (z, y, x, time) float64 63MB ...
+    b        (z, y, x, time) float64 63MB ...
+    p        (z, y, x, time) float64 63MB ...
+<xarray.Dataset> Size: 11MB
+Dimensions:  (z: 32, y: 16, x: 16, time: 15)
+Coordinates:
+  * z        (z) float64 256B 1.13 1.695 2.259 2.824 ... 16.95 17.51 18.07 18.64
+  * y        (y) float64 128B 0.8558 2.567 4.279 5.991 ... 23.11 24.82 26.53
+  * x        (x) float64 128B 0.8558 2.567 4.279 5.991 ... 23.11 24.82 26.53
+  * time     (time) int64 120B 616000 617000 618000 ... 628000 629000 630000
+Data variables:
+    u        (z, y, x, time) float64 983kB ...
+    v        (z, y, x, time) float64 983kB ...
+    w        (z, y, x, time) float64 983kB ...
+    tau11    (z, y, x, time) float64 983kB ...
+    tau22    (z, y, x, time) float64 983kB ...
+    tau33    (z, y, x, time) float64 983kB ...
+    tau12    (z, y, x, time) float64 983kB ...
+    tau13    (z, y, x, time) float64 983kB ...
+    tau23    (z, y, x, time) float64 983kB ...
+    b        (z, y, x, time) float64 983kB ...
+    p        (z, y, x, time) float64 983kB ...
+output shape is (229146, 6)
+input shape should be (229146, 4, 3, 3, 3)
+run #3
+horiz. vel train stdev: 0.0007894811944066073
+vert. vel train stdev: 9.605990736116373e-05
+buoyancy train stdev: 0.0001121945652425112
+Tau_h train stdev: 5.051159668321063e-06
+Tau_i3 train stdev: 8.333108918574891e-08
+Tau_33 train stdev: 8.218748306593332e-08
+Test Files:
+<xarray.Dataset> Size: 110MB
+Dimensions:  (z: 64, y: 32, x: 32, time: 15)
+Coordinates:
+  * z        (z) float64 512B 0.5648 0.8473 1.13 1.412 ... 17.79 18.07 18.36
+  * y        (y) float64 256B 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * x        (x) float64 256B 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * time     (time) int64 120B 616000 617000 618000 ... 628000 629000 630000
+Data variables: (12/14)
+    u        (z, y, x, time) float64 8MB ...
+    v        (z, y, x, time) float64 8MB ...
+    w        (z, y, x, time) float64 8MB ...
+    tau11    (z, y, x, time) float64 8MB ...
+    tau22    (z, y, x, time) float64 8MB ...
+    tau33    (z, y, x, time) float64 8MB ...
+    ...       ...
+    tau23    (z, y, x, time) float64 8MB ...
+    b        (z, y, x, time) float64 8MB ...
+    ub       (z, y, x, time) float64 8MB ...
+    vb       (z, y, x, time) float64 8MB ...
+    wb       (z, y, x, time) float64 8MB ...
+    p        (z, y, x, time) float64 8MB ...
+output shape is (282549, 6)
+input shape should be (282549, 4, 3, 3, 3)
+Lossweights:
+[  204870.4895   853873.1438 11405804.6415   856529.3497 13944297.3733 12167302.8872]
+0
+[0.01]
+LR:  None
+train loss: 0.22563381444038785
+validation loss: 0.33372014969158564
+test loss: 0.33393660807797365
+1
+[0.001]
+LR:  None
+train loss: 0.21287724862859733
+validation loss: 0.32751842777540485
+test loss: 0.32794979069310964
+2
+[0.0001]
+LR:  None
+train loss: 0.21104206620550064
+validation loss: 0.32868364027583485
+test loss: 0.3290200299789044
+3
+[0.0001]
+LR:  None
+train loss: 0.21045959986600446
+validation loss: 0.3277730028998138
+test loss: 0.32779695423748517
+4
+[0.0001]
+LR:  None
+train loss: 0.20986249359096432
+validation loss: 0.3295338106908911
+test loss: 0.3299104351755502
+5
+[0.0001]
+LR:  None
+train loss: 0.20941268472406077
+validation loss: 0.3268429654343915
+test loss: 0.3272402200076572
+6
+[0.0001]
+LR:  None
+train loss: 0.20859303904082552
+validation loss: 0.33000446920445164
+test loss: 0.3303498308926006
+7
+[0.0001]
+LR:  None
+train loss: 0.207989007937117
+validation loss: 0.32916759911423804
+test loss: 0.3292996116951467
+8
+[0.0001]
+LR:  None
+train loss: 0.20747760005178725
+validation loss: 0.3301574894111055
+test loss: 0.3301290118228793
+9
+[0.0001]
+LR:  None
+train loss: 0.20686890690468235
+validation loss: 0.3299232652180885
+test loss: 0.3300053867544034
+10
+[0.0001]
+LR:  None
+train loss: 0.20634004980440232
+validation loss: 0.3313748285136746
+test loss: 0.33146876539061565
+11
+[0.0001]
+LR:  None
+train loss: 0.20570470215255057
+validation loss: 0.3316145693772035
+test loss: 0.33177267347028244
+12
+[0.0001]
+LR:  None
+train loss: 0.20516523965150424
+validation loss: 0.3310283162142926
+test loss: 0.33122976414111727
+13
+[0.0001]
+LR:  None
+train loss: 0.20450340933021144
+validation loss: 0.3334484131587131
+test loss: 0.33368030499491946
+14
+[0.0001]
+LR:  None
+train loss: 0.20392688547947
+validation loss: 0.3331988295738627
+test loss: 0.3334433443418659
+15
+[0.0001]
+LR:  None
+train loss: 0.20356591167568208
+validation loss: 0.3304123252425592
+test loss: 0.330489126786412
+16
+[0.0001]
+LR:  None
+train loss: 0.20300102006543042
+validation loss: 0.33226902809850795
+test loss: 0.3324542171679732
+17
+[0.0001]
+LR:  None
+train loss: 0.20246003754763323
+validation loss: 0.33308379471799104
+test loss: 0.3333898471037766
+18
+[0.0001]
+LR:  None
+train loss: 0.20205101879988224
+validation loss: 0.33801026823635816
+test loss: 0.33838772600976846
+19
+[0.0001]
+LR:  None
+train loss: 0.20138158141287146
+validation loss: 0.33356262221711314
+test loss: 0.33339891717506803
+20
+[0.0001]
+LR:  None
+train loss: 0.20107362890861658
+validation loss: 0.3379822353250194
+test loss: 0.3380125874764908
+21
+[0.0001]
+LR:  None
+train loss: 0.20046136321855815
+validation loss: 0.33514015524504714
+test loss: 0.33520496479911893
+22
+[0.0001]
+LR:  None
+train loss: 0.19993748944971643
+validation loss: 0.33534259150013473
+test loss: 0.3355254917160504
+23
+[0.0001]
+LR:  None
+train loss: 0.19932514393680698
+validation loss: 0.33489135830745576
+test loss: 0.33495753323478317
+24
+[0.0001]
+LR:  None
+train loss: 0.19905071424573784
+validation loss: 0.33338617457406283
+test loss: 0.3335615417068696
+25
+[0.0001]
+LR:  None
+train loss: 0.19860402516470074
+validation loss: 0.33727751008996787
+test loss: 0.33786433199588267
+ES epoch: 5
+Test data
+Skills for tau_11
+R^2: 0.8330
+Correlation: 0.9719
+
+Skills for tau_12
+R^2: 0.6977
+Correlation: 0.8360
+
+Skills for tau_13
+R^2: 0.7020
+Correlation: 0.8696
+
+Skills for tau_22
+R^2: 0.6462
+Correlation: 0.8601
+
+Skills for tau_23
+R^2: 0.6335
+Correlation: 0.8163
+
+Skills for tau_33
+R^2: 0.4160
+Correlation: 0.8033
+
+Validation data
+Skills for tau_11
+R^2: 0.8325
+Correlation: 0.9725
+
+Skills for tau_12
+R^2: 0.6934
+Correlation: 0.8334
+
+Skills for tau_13
+R^2: 0.6999
+Correlation: 0.8673
+
+Skills for tau_22
+R^2: 0.6437
+Correlation: 0.8587
+
+Skills for tau_23
+R^2: 0.6317
+Correlation: 0.8160
+
+Skills for tau_33
+R^2: 0.4187
+Correlation: 0.8038
+
+Train data
+Skills for tau_11
+R^2: 0.9878
+Correlation: 0.9940
+
+Skills for tau_12
+R^2: 0.9676
+Correlation: 0.9837
+
+Skills for tau_13
+R^2: 0.7819
+Correlation: 0.8851
+
+Skills for tau_22
+R^2: 0.9270
+Correlation: 0.9631
+
+Skills for tau_23
+R^2: 0.7076
+Correlation: 0.8432
+
+Skills for tau_33
+R^2: 0.7724
+Correlation: 0.8824
+
+Train Files:
+<xarray.Dataset> Size: 692MB
+Dimensions:  (z: 128, y: 64, x: 64, time: 15)
+Coordinates:
+  * z        (z) float64 1kB 0.2824 0.4236 0.5648 0.706 ... 17.93 18.07 18.22
+  * y        (y) float64 512B 0.214 0.6419 1.07 1.498 ... 26.32 26.74 27.17
+  * x        (x) float64 512B 0.214 0.6419 1.07 1.498 ... 26.32 26.74 27.17
+  * time     (time) int64 120B 616000 617000 618000 ... 628000 629000 630000
+Data variables:
+    u        (z, y, x, time) float64 63MB ...
+    v        (z, y, x, time) float64 63MB ...
+    w        (z, y, x, time) float64 63MB ...
+    tau11    (z, y, x, time) float64 63MB ...
+    tau22    (z, y, x, time) float64 63MB ...
+    tau33    (z, y, x, time) float64 63MB ...
+    tau12    (z, y, x, time) float64 63MB ...
+    tau13    (z, y, x, time) float64 63MB ...
+    tau23    (z, y, x, time) float64 63MB ...
+    b        (z, y, x, time) float64 63MB ...
+    p        (z, y, x, time) float64 63MB ...
+<xarray.Dataset> Size: 11MB
+Dimensions:  (z: 32, y: 16, x: 16, time: 15)
+Coordinates:
+  * z        (z) float64 256B 1.13 1.695 2.259 2.824 ... 16.95 17.51 18.07 18.64
+  * y        (y) float64 128B 0.8558 2.567 4.279 5.991 ... 23.11 24.82 26.53
+  * x        (x) float64 128B 0.8558 2.567 4.279 5.991 ... 23.11 24.82 26.53
+  * time     (time) int64 120B 616000 617000 618000 ... 628000 629000 630000
+Data variables:
+    u        (z, y, x, time) float64 983kB ...
+    v        (z, y, x, time) float64 983kB ...
+    w        (z, y, x, time) float64 983kB ...
+    tau11    (z, y, x, time) float64 983kB ...
+    tau22    (z, y, x, time) float64 983kB ...
+    tau33    (z, y, x, time) float64 983kB ...
+    tau12    (z, y, x, time) float64 983kB ...
+    tau13    (z, y, x, time) float64 983kB ...
+    tau23    (z, y, x, time) float64 983kB ...
+    b        (z, y, x, time) float64 983kB ...
+    p        (z, y, x, time) float64 983kB ...
+output shape is (229331, 6)
+input shape should be (229331, 4, 3, 3, 3)
+run #4
+horiz. vel train stdev: 0.0007855297140158233
+vert. vel train stdev: 9.603073688774718e-05
+buoyancy train stdev: 0.0001121454133996896
+Tau_h train stdev: 4.979472418606793e-06
+Tau_i3 train stdev: 8.317178399380965e-08
+Tau_33 train stdev: 8.205866987519555e-08
+Test Files:
+<xarray.Dataset> Size: 110MB
+Dimensions:  (z: 64, y: 32, x: 32, time: 15)
+Coordinates:
+  * z        (z) float64 512B 0.5648 0.8473 1.13 1.412 ... 17.79 18.07 18.36
+  * y        (y) float64 256B 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * x        (x) float64 256B 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * time     (time) int64 120B 616000 617000 618000 ... 628000 629000 630000
+Data variables: (12/14)
+    u        (z, y, x, time) float64 8MB ...
+    v        (z, y, x, time) float64 8MB ...
+    w        (z, y, x, time) float64 8MB ...
+    tau11    (z, y, x, time) float64 8MB ...
+    tau22    (z, y, x, time) float64 8MB ...
+    tau33    (z, y, x, time) float64 8MB ...
+    ...       ...
+    tau23    (z, y, x, time) float64 8MB ...
+    b        (z, y, x, time) float64 8MB ...
+    ub       (z, y, x, time) float64 8MB ...
+    vb       (z, y, x, time) float64 8MB ...
+    wb       (z, y, x, time) float64 8MB ...
+    p        (z, y, x, time) float64 8MB ...
+output shape is (282637, 6)
+input shape should be (282637, 4, 3, 3, 3)
+Lossweights:
+[  208003.5117   861958.9498 11436921.0642   855197.8518 13952861.2733 12186402.7472]
+0
+[0.01]
+LR:  None
+train loss: 0.23275644734158168
+validation loss: 0.3295577370651829
+test loss: 0.32906076733099826
+1
+[0.001]
+LR:  None
+train loss: 0.21323179961153055
+validation loss: 0.3325000574113472
+test loss: 0.3322715213083823
+2
+[0.0001]
+LR:  None
+train loss: 0.2104897627180102
+validation loss: 0.33181967637354765
+test loss: 0.3317148500372342
+3
+[0.0001]
+LR:  None
+train loss: 0.20971851827204663
+validation loss: 0.3334943910842848
+test loss: 0.3333914887744354
+4
+[0.0001]
+LR:  None
+train loss: 0.20892538605201344
+validation loss: 0.3337572385500119
+test loss: 0.33381657382390983
+5
+[0.0001]
+LR:  None
+train loss: 0.20809677478504687
+validation loss: 0.33561948522970964
+test loss: 0.33545846103134985
+6
+[0.0001]
+LR:  None
+train loss: 0.207173536439876
+validation loss: 0.33499790598670914
+test loss: 0.3347840815386526
+7
+[0.0001]
+LR:  None
+train loss: 0.20631042319222717
+validation loss: 0.3345302568908178
+test loss: 0.3342127852354465
+8
+[0.0001]
+LR:  None
+train loss: 0.2056670599110089
+validation loss: 0.33523302638482255
+test loss: 0.3349676168571283
+9
+[0.0001]
+LR:  None
+train loss: 0.204918670306022
+validation loss: 0.3376727064161102
+test loss: 0.3372968409621341
+10
+[0.0001]
+LR:  None
+train loss: 0.2039004483875177
+validation loss: 0.337857720096892
+test loss: 0.3374212645987988
+11
+[0.0001]
+LR:  None
+train loss: 0.2031851832888197
+validation loss: 0.3358396305351541
+test loss: 0.33538221865834733
+12
+[0.0001]
+LR:  None
+train loss: 0.20240901817494095
+validation loss: 0.3408713985965933
+test loss: 0.34054326428163717
+13
+[0.0001]
+LR:  None
+train loss: 0.2016487126952968
+validation loss: 0.3396893136243673
+test loss: 0.3391275663295623
+14
+[0.0001]
+LR:  None
+train loss: 0.20103124019794105
+validation loss: 0.34359889479764716
+test loss: 0.3431963828786433
+15
+[0.0001]
+LR:  None
+train loss: 0.2002999831147136
+validation loss: 0.34455563326392186
+test loss: 0.34403780714323484
+16
+[0.0001]
+LR:  None
+train loss: 0.19969134993225168
+validation loss: 0.34164960654589904
+test loss: 0.34126503917854584
+17
+[0.0001]
+LR:  None
+train loss: 0.19902224899464285
+validation loss: 0.34276071848854495
+test loss: 0.3422033195769314
+18
+[0.0001]
+LR:  None
+train loss: 0.1983231385054022
+validation loss: 0.34378171871141594
+test loss: 0.3434169208268391
+19
+[0.0001]
+LR:  None
+train loss: 0.19772564934617867
+validation loss: 0.3474425069979955
+test loss: 0.34675086010147127
+20
+[0.0001]
+LR:  None
+train loss: 0.19704128556272593
+validation loss: 0.3446147329780008
+test loss: 0.34406601390938707
+ES epoch: 0
+Test data
+Skills for tau_11
+R^2: 0.8238
+Correlation: 0.9597
+
+Skills for tau_12
+R^2: 0.6587
+Correlation: 0.8133
+
+Skills for tau_13
+R^2: 0.6950
+Correlation: 0.8524
+
+Skills for tau_22
+R^2: 0.7181
+Correlation: 0.8564
+
+Skills for tau_23
+R^2: 0.6241
+Correlation: 0.8048
+
+Skills for tau_33
+R^2: 0.4220
+Correlation: 0.7627
+
+Validation data
+Skills for tau_11
+R^2: 0.8245
+Correlation: 0.9599
+
+Skills for tau_12
+R^2: 0.6546
+Correlation: 0.8109
+
+Skills for tau_13
+R^2: 0.6953
+Correlation: 0.8528
+
+Skills for tau_22
+R^2: 0.7104
+Correlation: 0.8516
+
+Skills for tau_23
+R^2: 0.6207
+Correlation: 0.8025
+
+Skills for tau_33
+R^2: 0.4210
+Correlation: 0.7625
+
+Train data
+Skills for tau_11
+R^2: 0.9706
+Correlation: 0.9902
+
+Skills for tau_12
+R^2: 0.9462
+Correlation: 0.9755
+
+Skills for tau_13
+R^2: 0.7567
+Correlation: 0.8709
+
+Skills for tau_22
+R^2: 0.8926
+Correlation: 0.9464
+
+Skills for tau_23
+R^2: 0.6911
+Correlation: 0.8343
+
+Skills for tau_33
+R^2: 0.7369
+Correlation: 0.8630
+
+[[0.973  0.8436 0.8652 0.8643 0.8185 0.801 ]
+ [0.9739 0.8289 0.8705 0.864  0.821  0.7998]
+ [0.9722 0.8292 0.8677 0.8569 0.8165 0.7883]
+ [0.9719 0.836  0.8696 0.8601 0.8163 0.8033]
+ [0.9597 0.8133 0.8524 0.8564 0.8048 0.7627]]
+[[0.8556 0.7097 0.699  0.6747 0.6328 0.4687]
+ [0.8642 0.6863 0.71   0.6627 0.6377 0.4864]
+ [0.8175 0.6762 0.7008 0.6102 0.6259 0.3512]
+ [0.833  0.6977 0.702  0.6462 0.6335 0.416 ]
+ [0.8238 0.6587 0.695  0.7181 0.6241 0.422 ]]
+tau_11 avg. R^2 is 0.8388313427017524 +/- 0.018093533595950565
+tau_12 avg. R^2 is 0.6857085778445045 +/- 0.017543815501244793
+tau_13 avg. R^2 is 0.7013568499199563 +/- 0.004936189742957619
+tau_22 avg. R^2 is 0.6623911762877542 +/- 0.03532830174829713
+tau_23 avg. R^2 is 0.6307817188714242 +/- 0.005038677386661685
+tau_33 avg. R^2 is 0.42888133748400453 +/- 0.04721008686349756
+Overall avg. R^2 is 0.657991833851566 +/- 0.0160601294850317
