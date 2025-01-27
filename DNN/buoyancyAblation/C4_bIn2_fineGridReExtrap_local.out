@@ -1,0 +1,3792 @@
+Restoring modules from user's e2cnn
+/burg/glab/users/ac5006/miniconda/envs/e2cnn/lib/python3.10/site-packages/e2cnn/nn/modules/r2_conv/basisexpansion_singleblock.py:80: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead. (Triggered internally at  /home/conda/feedstock_root/build_artifacts/pytorch-recipe_1660087551192/work/aten/src/ATen/native/IndexingUtils.h:27.)
+  full_mask[mask] = norms.to(torch.uint8)
+/burg/glab/users/ac5006/miniconda/envs/e2cnn/lib/python3.10/site-packages/e2cnn/nn/modules/r2_conv/basisexpansion_singleblock.py:80: UserWarning: masked_fill_ received a mask with dtype torch.uint8, this behavior is now deprecated,please use a mask with dtype torch.bool instead. (Triggered internally at  /home/conda/feedstock_root/build_artifacts/pytorch-recipe_1660087551192/work/aten/src/ATen/native/TensorAdvancedIndexing.cpp:1581.)
+  full_mask[mask] = norms.to(torch.uint8)
+cuda
+C4_bIn2_fineGridReExtrap_local_4x513Re900_4x1026Re1800_
+Train Files:
+<xarray.Dataset>
+Dimensions:  (z: 128, y: 64, x: 64, time: 44)
+Coordinates:
+  * z        (z) float64 0.2824 0.4236 0.5648 0.706 ... 17.79 17.93 18.07 18.22
+  * y        (y) float64 0.1712 0.5991 1.027 1.455 ... 25.85 26.27 26.7 27.13
+  * x        (x) float64 0.1712 0.5991 1.027 1.455 ... 25.85 26.27 26.7 27.13
+  * time     (time) int64 590200 590400 590600 590800 ... 608000 609000 610000
+Data variables:
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    tau12    (z, y, x, time) float64 ...
+    tau13    (z, y, x, time) float64 ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+<xarray.Dataset>
+Dimensions:  (z: 128, y: 64, x: 64, time: 15)
+Coordinates:
+  * z        (z) float64 0.2824 0.4236 0.5648 0.706 ... 17.79 17.93 18.07 18.22
+  * y        (y) float64 0.214 0.6419 1.07 1.498 ... 25.89 26.32 26.74 27.17
+  * x        (x) float64 0.214 0.6419 1.07 1.498 ... 25.89 26.32 26.74 27.17
+  * time     (time) int64 616000 617000 618000 619000 ... 628000 629000 630000
+Data variables:
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    tau12    (z, y, x, time) float64 ...
+    tau13    (z, y, x, time) float64 ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+output shape is (109216, 6)
+input shape should be (109216, 4, 3, 3, 3)
+input shape to do 3rd dimension as channel in R2Conv is (109216, 12, 3, 3)
+Test Files:
+<xarray.Dataset>
+Dimensions:  (z: 128, y: 64, x: 64, time: 3)
+Coordinates:
+  * z        (z) float64 0.2824 0.4236 0.5648 0.706 ... 17.79 17.93 18.07 18.22
+  * y        (y) float64 0.1997 0.6276 1.056 1.483 ... 25.87 26.3 26.73 27.16
+  * x        (x) float64 0.1997 0.6276 1.056 1.483 ... 25.87 26.3 26.73 27.16
+  * time     (time) int64 1368000 1377000 1386000
+Data variables:
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    tau12    (z, y, x, time) float64 ...
+    tau13    (z, y, x, time) float64 ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+output shape is (1155072, 6)
+input shape should be (1155072, 4, 3, 3, 3)
+input shape to do 3rd dimension as channel in R2Conv is (1155072, 12, 3, 3)
+Lossweights:
+[  203050.0298525   1131986.11226501  8247677.77413436  1850073.4320843
+ 12320640.64031575  5047852.37173789]
+0
+[0.01]
+LR:  None
+train loss: 0.17114885804637456
+validation loss: 0.4834997883336698
+test loss: 0.4826716351753128
+1
+[0.001]
+LR:  None
+train loss: 0.159119083157178
+validation loss: 0.4550603430682894
+test loss: 0.4542985065493823
+2
+[0.0001]
+LR:  None
+train loss: 0.15788176883347843
+validation loss: 0.4516265297521543
+test loss: 0.45085001618525267
+3
+[0.0001]
+LR:  None
+train loss: 0.15759108386950718
+validation loss: 0.4512025901382436
+test loss: 0.45044826083858697
+4
+[0.0001]
+LR:  None
+train loss: 0.1570753575153226
+validation loss: 0.44944028434997946
+test loss: 0.4486953304516647
+5
+[0.0001]
+LR:  None
+train loss: 0.15677726653105087
+validation loss: 0.44911071670597363
+test loss: 0.4483941944006019
+6
+[0.0001]
+LR:  None
+train loss: 0.15654729436240528
+validation loss: 0.4484932619852836
+test loss: 0.4476754844890604
+7
+[0.0001]
+LR:  None
+train loss: 0.15617575678629494
+validation loss: 0.4479355526878156
+test loss: 0.44719521786560473
+8
+[0.0001]
+LR:  None
+train loss: 0.15566405254623067
+validation loss: 0.4467971432080805
+test loss: 0.44600568720103095
+9
+[0.0001]
+LR:  None
+train loss: 0.15536152176687706
+validation loss: 0.44610612540899286
+test loss: 0.44535659643833264
+10
+[0.0001]
+LR:  None
+train loss: 0.1550038589014865
+validation loss: 0.4453683123543946
+test loss: 0.44458802853571133
+11
+[0.0001]
+LR:  None
+train loss: 0.15458800062049272
+validation loss: 0.44370912720778444
+test loss: 0.4429595419361794
+12
+[0.0001]
+LR:  None
+train loss: 0.15459434934617103
+validation loss: 0.44347954612430796
+test loss: 0.44281563982085853
+13
+[0.0001]
+LR:  None
+train loss: 0.15393560794933994
+validation loss: 0.4429164048676308
+test loss: 0.44214022036675976
+14
+[0.0001]
+LR:  None
+train loss: 0.15358295564835153
+validation loss: 0.4419053705283454
+test loss: 0.4411569107504834
+15
+[0.0001]
+LR:  None
+train loss: 0.15333938874305575
+validation loss: 0.4413068573530687
+test loss: 0.44045361736499866
+16
+[0.0001]
+LR:  None
+train loss: 0.15286053427426027
+validation loss: 0.4398046026087378
+test loss: 0.4391006971100514
+17
+[0.0001]
+LR:  None
+train loss: 0.15241069019087167
+validation loss: 0.4382498443758176
+test loss: 0.4374408939463365
+18
+[0.0001]
+LR:  None
+train loss: 0.1521560547784653
+validation loss: 0.43837648293646914
+test loss: 0.43756315719079214
+19
+[0.0001]
+LR:  None
+train loss: 0.15193562767333563
+validation loss: 0.4369992710600315
+test loss: 0.4361560087694424
+20
+[0.0001]
+LR:  None
+train loss: 0.15170449466202515
+validation loss: 0.43614935502012436
+test loss: 0.43546764795400617
+21
+[0.0001]
+LR:  None
+train loss: 0.15103573946456075
+validation loss: 0.4352571738779618
+test loss: 0.434565851284063
+22
+[0.0001]
+LR:  None
+train loss: 0.150539848765941
+validation loss: 0.43415252058722276
+test loss: 0.4334535187174367
+23
+[0.0001]
+LR:  None
+train loss: 0.1503216195999146
+validation loss: 0.4335827135176741
+test loss: 0.4328906461981576
+24
+[0.0001]
+LR:  None
+train loss: 0.1502064931601097
+validation loss: 0.4326073141970539
+test loss: 0.4319968864997376
+25
+[0.0001]
+LR:  None
+train loss: 0.14965306651031487
+validation loss: 0.43170697523583557
+test loss: 0.4310415520863255
+26
+[0.0001]
+LR:  None
+train loss: 0.14939534931522602
+validation loss: 0.4309189155386635
+test loss: 0.4302444908335815
+27
+[0.0001]
+LR:  None
+train loss: 0.14904311313715168
+validation loss: 0.42970715766973694
+test loss: 0.42903934795143256
+28
+[0.0001]
+LR:  None
+train loss: 0.14899645462073857
+validation loss: 0.42946833276865537
+test loss: 0.4288427143694684
+29
+[0.0001]
+LR:  None
+train loss: 0.14839144375766633
+validation loss: 0.4287438013704191
+test loss: 0.4280576764068005
+30
+[0.0001]
+LR:  None
+train loss: 0.1481994127114875
+validation loss: 0.42783263943469146
+test loss: 0.42723834445283065
+31
+[0.0001]
+LR:  None
+train loss: 0.14791856900712871
+validation loss: 0.42753522355364204
+test loss: 0.426960346506795
+32
+[0.0001]
+LR:  None
+train loss: 0.14757533954249447
+validation loss: 0.4264267978965454
+test loss: 0.42599426672214863
+33
+[0.0001]
+LR:  None
+train loss: 0.14727380768177353
+validation loss: 0.42557094006611085
+test loss: 0.4250185529976341
+34
+[0.0001]
+LR:  None
+train loss: 0.14713562587457021
+validation loss: 0.4249180569473249
+test loss: 0.4243539710423515
+35
+[0.0001]
+LR:  None
+train loss: 0.146683784929459
+validation loss: 0.42446153201172276
+test loss: 0.42388762977782257
+36
+[0.0001]
+LR:  None
+train loss: 0.14653076144872376
+validation loss: 0.42341692909056333
+test loss: 0.42291228042309653
+37
+[0.0001]
+LR:  None
+train loss: 0.14609625007863875
+validation loss: 0.4226305943485423
+test loss: 0.42213049830595045
+38
+[0.0001]
+LR:  None
+train loss: 0.14572206980235708
+validation loss: 0.4214268379774592
+test loss: 0.4209759582718019
+39
+[0.0001]
+LR:  None
+train loss: 0.14564366470302054
+validation loss: 0.4216307875600653
+test loss: 0.42115170365027493
+40
+[0.0001]
+LR:  None
+train loss: 0.14533117699072937
+validation loss: 0.4214254551294587
+test loss: 0.42086342041878694
+41
+[0.0001]
+LR:  None
+train loss: 0.14496873027847432
+validation loss: 0.4204758679792335
+test loss: 0.4200200340560348
+42
+[0.0001]
+LR:  None
+train loss: 0.14478106995216936
+validation loss: 0.41972787846092957
+test loss: 0.4192947151440259
+43
+[0.0001]
+LR:  None
+train loss: 0.1446552631452967
+validation loss: 0.41894389147797734
+test loss: 0.4184946962616909
+44
+[0.0001]
+LR:  None
+train loss: 0.14437751193766873
+validation loss: 0.4183681658103118
+test loss: 0.41791432539538154
+45
+[0.0001]
+LR:  None
+train loss: 0.14430196002516427
+validation loss: 0.4186164025571892
+test loss: 0.4182608089208891
+46
+[0.0001]
+LR:  None
+train loss: 0.14401205979792145
+validation loss: 0.41712159745451316
+test loss: 0.41667487390522173
+47
+[0.0001]
+LR:  None
+train loss: 0.14378674214780754
+validation loss: 0.41662151362001
+test loss: 0.41618708395761417
+48
+[0.0001]
+LR:  None
+train loss: 0.14326041665505695
+validation loss: 0.41656688106829226
+test loss: 0.4161766703340095
+49
+[0.0001]
+LR:  None
+train loss: 0.14313874071139285
+validation loss: 0.4158464770135485
+test loss: 0.4153892567480785
+50
+[0.0001]
+LR:  None
+train loss: 0.14304846629592352
+validation loss: 0.4159162625525032
+test loss: 0.415524913151575
+51
+[0.0001]
+LR:  None
+train loss: 0.14278174806924612
+validation loss: 0.41516724268779115
+test loss: 0.41476175867821574
+52
+[0.0001]
+LR:  None
+train loss: 0.14263477719216086
+validation loss: 0.4146388150769626
+test loss: 0.41429307669424464
+53
+[0.0001]
+LR:  None
+train loss: 0.14229023510052102
+validation loss: 0.4139938702468358
+test loss: 0.413612088226685
+54
+[0.0001]
+LR:  None
+train loss: 0.14205707365004344
+validation loss: 0.41393700659099597
+test loss: 0.41351205627265886
+55
+[0.0001]
+LR:  None
+train loss: 0.14196536575446705
+validation loss: 0.413648313141981
+test loss: 0.4131792013258312
+56
+[0.0001]
+LR:  None
+train loss: 0.14162171914035362
+validation loss: 0.41283032598517605
+test loss: 0.41242510930963017
+57
+[0.0001]
+LR:  None
+train loss: 0.14150415061625418
+validation loss: 0.4125936721080879
+test loss: 0.41216872811623334
+58
+[0.0001]
+LR:  None
+train loss: 0.14117539347800212
+validation loss: 0.412051106769151
+test loss: 0.41169131718550295
+59
+[0.0001]
+LR:  None
+train loss: 0.14093264332776528
+validation loss: 0.4114098690684113
+test loss: 0.4110306970165156
+60
+[0.0001]
+LR:  None
+train loss: 0.1407187553971219
+validation loss: 0.41103165461747915
+test loss: 0.41053512975356915
+61
+[0.0001]
+LR:  None
+train loss: 0.14051790439058734
+validation loss: 0.41062622508740904
+test loss: 0.41029366505187836
+62
+[0.0001]
+LR:  None
+train loss: 0.14035354857760418
+validation loss: 0.41009601050000716
+test loss: 0.40976727463053236
+63
+[0.0001]
+LR:  None
+train loss: 0.14018310223358854
+validation loss: 0.41050851067952393
+test loss: 0.41007271693938113
+64
+[0.0001]
+LR:  None
+train loss: 0.13990057818323082
+validation loss: 0.4090040523389785
+test loss: 0.4086516871574687
+65
+[0.0001]
+LR:  None
+train loss: 0.13990185396057123
+validation loss: 0.40905405233433456
+test loss: 0.4086773400073427
+66
+[0.0001]
+LR:  None
+train loss: 0.1395364198147235
+validation loss: 0.4094078257772152
+test loss: 0.4089580911888278
+67
+[0.0001]
+LR:  None
+train loss: 0.13932403403311971
+validation loss: 0.4084228249358728
+test loss: 0.40797575642435535
+68
+[0.0001]
+LR:  None
+train loss: 0.13912170062150103
+validation loss: 0.4077518430782539
+test loss: 0.4073763697777011
+69
+[0.0001]
+LR:  None
+train loss: 0.13898343800579946
+validation loss: 0.40778875789813807
+test loss: 0.4073566835353167
+70
+[0.0001]
+LR:  None
+train loss: 0.1386788727935147
+validation loss: 0.40686880761499217
+test loss: 0.40651361652753765
+71
+[0.0001]
+LR:  None
+train loss: 0.13864577503041406
+validation loss: 0.40650861982073805
+test loss: 0.4061361745554317
+72
+[0.0001]
+LR:  None
+train loss: 0.1382840889388884
+validation loss: 0.406165882068015
+test loss: 0.4057619206433252
+73
+[0.0001]
+LR:  None
+train loss: 0.13825168763202828
+validation loss: 0.4064301356356614
+test loss: 0.4060913309594841
+74
+[0.0001]
+LR:  None
+train loss: 0.13782981757258922
+validation loss: 0.4056906586817322
+test loss: 0.40521980425306503
+75
+[0.0001]
+LR:  None
+train loss: 0.13766822018820696
+validation loss: 0.4055881347365633
+test loss: 0.4050798317624565
+76
+[0.0001]
+LR:  None
+train loss: 0.13755225872615967
+validation loss: 0.4047299922768645
+test loss: 0.4043568314689642
+77
+[0.0001]
+LR:  None
+train loss: 0.13710333369704164
+validation loss: 0.4043154580554749
+test loss: 0.4039568894342685
+78
+[0.0001]
+LR:  None
+train loss: 0.13686960573457804
+validation loss: 0.4044075686640852
+test loss: 0.4038935362083885
+79
+[0.0001]
+LR:  None
+train loss: 0.1367685220824217
+validation loss: 0.40391365945213603
+test loss: 0.40356724429967006
+80
+[0.0001]
+LR:  None
+train loss: 0.13640485262586707
+validation loss: 0.40346343365149084
+test loss: 0.4031219088305628
+81
+[0.0001]
+LR:  None
+train loss: 0.13656309828487903
+validation loss: 0.4030092033161614
+test loss: 0.4027009667247386
+82
+[0.0001]
+LR:  None
+train loss: 0.13608584375891145
+validation loss: 0.4025338971096722
+test loss: 0.40216842830820193
+83
+[0.0001]
+LR:  None
+train loss: 0.1358818421237269
+validation loss: 0.4020773427216778
+test loss: 0.4017155905649731
+84
+[0.0001]
+LR:  None
+train loss: 0.13572093333843224
+validation loss: 0.40205148352385994
+test loss: 0.40165783767429275
+85
+[0.0001]
+LR:  None
+train loss: 0.13546872305856966
+validation loss: 0.4015493078302634
+test loss: 0.40126369382500976
+86
+[0.0001]
+LR:  None
+train loss: 0.13516001512470066
+validation loss: 0.40154118095016456
+test loss: 0.40106460331959715
+87
+[0.0001]
+LR:  None
+train loss: 0.13523189189834647
+validation loss: 0.40089125195577313
+test loss: 0.40043544875012926
+88
+[0.0001]
+LR:  None
+train loss: 0.13500802854365024
+validation loss: 0.4010015261654904
+test loss: 0.40067398369232643
+89
+[0.0001]
+LR:  None
+train loss: 0.13495028785991844
+validation loss: 0.4007798937323916
+test loss: 0.4004553761174666
+90
+[0.0001]
+LR:  None
+train loss: 0.13441897480083206
+validation loss: 0.40018618721569216
+test loss: 0.3998125895214028
+91
+[0.0001]
+LR:  None
+train loss: 0.1340774490306099
+validation loss: 0.39981015540495946
+test loss: 0.399513550303233
+92
+[0.0001]
+LR:  None
+train loss: 0.13439876860125471
+validation loss: 0.4005922170625428
+test loss: 0.4002426081937011
+93
+[0.0001]
+LR:  None
+train loss: 0.13386453206112114
+validation loss: 0.39919460725447853
+test loss: 0.39876991625411456
+94
+[0.0001]
+LR:  None
+train loss: 0.13368192485114896
+validation loss: 0.39956064934160235
+test loss: 0.39919009968181346
+95
+[0.0001]
+LR:  None
+train loss: 0.13354983017596825
+validation loss: 0.3990575163965711
+test loss: 0.3986213845231013
+96
+[0.0001]
+LR:  None
+train loss: 0.13354052172341974
+validation loss: 0.39822228093983536
+test loss: 0.39784679645309384
+97
+[0.0001]
+LR:  None
+train loss: 0.1332512921243217
+validation loss: 0.39869903915768606
+test loss: 0.39831920185799086
+98
+[0.0001]
+LR:  None
+train loss: 0.132888215833562
+validation loss: 0.39821400379190874
+test loss: 0.39781708031260044
+99
+[0.0001]
+LR:  None
+train loss: 0.13284310867072963
+validation loss: 0.39840639833793984
+test loss: 0.39809084342946444
+100
+[0.0001]
+LR:  None
+train loss: 0.13255589522989103
+validation loss: 0.39811935206730964
+test loss: 0.39768937774670055
+101
+[0.0001]
+LR:  None
+train loss: 0.13259011846539187
+validation loss: 0.3981116776967653
+test loss: 0.397697966533278
+102
+[0.0001]
+LR:  None
+train loss: 0.13223311273301133
+validation loss: 0.39749442616922886
+test loss: 0.39706690120634863
+103
+[0.0001]
+LR:  None
+train loss: 0.13219574041014642
+validation loss: 0.3974236107459208
+test loss: 0.3970626288715657
+104
+[0.0001]
+LR:  None
+train loss: 0.13218264831100485
+validation loss: 0.3981809654267153
+test loss: 0.3977582534435155
+105
+[0.0001]
+LR:  None
+train loss: 0.13198143724817765
+validation loss: 0.39792355079129227
+test loss: 0.397529485012612
+106
+[0.0001]
+LR:  None
+train loss: 0.13203068220507883
+validation loss: 0.39738200245292377
+test loss: 0.3969665800789539
+107
+[0.0001]
+LR:  None
+train loss: 0.13153829165941694
+validation loss: 0.39671460687230686
+test loss: 0.3963101031679371
+108
+[0.0001]
+LR:  None
+train loss: 0.13148646592151259
+validation loss: 0.397172166249965
+test loss: 0.396888333544383
+109
+[0.0001]
+LR:  None
+train loss: 0.13157913435795815
+validation loss: 0.3966147240373964
+test loss: 0.3961876131238587
+110
+[0.0001]
+LR:  None
+train loss: 0.13134711904313862
+validation loss: 0.39638513801475866
+test loss: 0.3959243518948393
+111
+[0.0001]
+LR:  None
+train loss: 0.1309965698358557
+validation loss: 0.39610401209531415
+test loss: 0.3957078355732776
+112
+[0.0001]
+LR:  None
+train loss: 0.13096648492968513
+validation loss: 0.3964663095421243
+test loss: 0.3960285724191844
+113
+[0.0001]
+LR:  None
+train loss: 0.1307355374487251
+validation loss: 0.39615497678919637
+test loss: 0.3957821635511777
+114
+[0.0001]
+LR:  None
+train loss: 0.13042417126965447
+validation loss: 0.3959470861098867
+test loss: 0.3955883774325762
+115
+[0.0001]
+LR:  None
+train loss: 0.13036189048100424
+validation loss: 0.39590841520566405
+test loss: 0.3955171054560198
+116
+[0.0001]
+LR:  None
+train loss: 0.13031730992283996
+validation loss: 0.396612407303749
+test loss: 0.3961698371866413
+117
+[0.0001]
+LR:  None
+train loss: 0.13050318382367393
+validation loss: 0.39617238464051724
+test loss: 0.3957835329445674
+118
+[0.0001]
+LR:  None
+train loss: 0.13009999255552226
+validation loss: 0.39619260149241514
+test loss: 0.3957553089613596
+119
+[0.0001]
+LR:  None
+train loss: 0.12990681479532828
+validation loss: 0.3959307877000125
+test loss: 0.395591618393063
+120
+[0.0001]
+LR:  None
+train loss: 0.12973531604026
+validation loss: 0.39537715722243993
+test loss: 0.3948821639893068
+121
+[0.0001]
+LR:  None
+train loss: 0.1299889052463324
+validation loss: 0.3962164775839771
+test loss: 0.3957454535517103
+122
+[0.0001]
+LR:  None
+train loss: 0.1295255082065238
+validation loss: 0.3956903046478798
+test loss: 0.39529437841074694
+123
+[0.0001]
+LR:  None
+train loss: 0.12938582537287607
+validation loss: 0.3955842541207613
+test loss: 0.39522732432930985
+124
+[0.0001]
+LR:  None
+train loss: 0.12946085141068772
+validation loss: 0.39589405484270473
+test loss: 0.39543288248926006
+125
+[0.0001]
+LR:  None
+train loss: 0.12925018054912252
+validation loss: 0.39527431476932007
+test loss: 0.39488633154056596
+126
+[0.0001]
+LR:  None
+train loss: 0.12905974296562522
+validation loss: 0.395506779717894
+test loss: 0.39502069966146086
+127
+[0.0001]
+LR:  None
+train loss: 0.1292532461736286
+validation loss: 0.39582409756810694
+test loss: 0.3954605604548656
+128
+[0.0001]
+LR:  None
+train loss: 0.12881019478331543
+validation loss: 0.39545851279362704
+test loss: 0.3950184950204478
+129
+[0.0001]
+LR:  None
+train loss: 0.12881001822760327
+validation loss: 0.39557317083651
+test loss: 0.39506126443868245
+130
+[0.0001]
+LR:  None
+train loss: 0.12867545472102307
+validation loss: 0.39491953985688794
+test loss: 0.3945804292459034
+131
+[0.0001]
+LR:  None
+train loss: 0.12838174698330126
+validation loss: 0.3949113094373668
+test loss: 0.3944811066402041
+132
+[0.0001]
+LR:  None
+train loss: 0.12817037666579206
+validation loss: 0.394830996010666
+test loss: 0.394472816144061
+133
+[0.0001]
+LR:  None
+train loss: 0.12828810923159645
+validation loss: 0.3950057626252043
+test loss: 0.39451694964417466
+134
+[0.0001]
+LR:  None
+train loss: 0.12803723044976545
+validation loss: 0.3951750067311704
+test loss: 0.3948535630184354
+135
+[0.0001]
+LR:  None
+train loss: 0.1279067408851506
+validation loss: 0.39509046177320895
+test loss: 0.3947585160676249
+136
+[0.0001]
+LR:  None
+train loss: 0.12790123180072666
+validation loss: 0.39454817605663
+test loss: 0.3941525113578295
+137
+[0.0001]
+LR:  None
+train loss: 0.12786757147429414
+validation loss: 0.39496000869358133
+test loss: 0.3945460036089064
+138
+[0.0001]
+LR:  None
+train loss: 0.1276611925942523
+validation loss: 0.3945398556243842
+test loss: 0.39417483896053596
+139
+[0.0001]
+LR:  None
+train loss: 0.12745585482043786
+validation loss: 0.39452688573383654
+test loss: 0.394217034173378
+140
+[0.0001]
+LR:  None
+train loss: 0.12738856391780298
+validation loss: 0.3942864904465324
+test loss: 0.39378754951049133
+141
+[0.0001]
+LR:  None
+train loss: 0.12732163353542916
+validation loss: 0.39476425144886407
+test loss: 0.3944077414474045
+142
+[0.0001]
+LR:  None
+train loss: 0.12717918756779972
+validation loss: 0.3944349923506046
+test loss: 0.3940268642170767
+143
+[0.0001]
+LR:  None
+train loss: 0.1268723625148286
+validation loss: 0.39449946511381656
+test loss: 0.39415806097451306
+144
+[0.0001]
+LR:  None
+train loss: 0.12688642691726673
+validation loss: 0.3945611351368542
+test loss: 0.39413960517439844
+145
+[0.0001]
+LR:  None
+train loss: 0.1267373551520403
+validation loss: 0.3945642502984162
+test loss: 0.3941469166184458
+146
+[0.0001]
+LR:  None
+train loss: 0.12671048389542447
+validation loss: 0.39420556466375795
+test loss: 0.3938920216320363
+147
+[0.0001]
+LR:  None
+train loss: 0.1266729399458399
+validation loss: 0.3941832694065756
+test loss: 0.39378922454846854
+148
+[0.0001]
+LR:  None
+train loss: 0.12689784490548475
+validation loss: 0.39440516649085994
+test loss: 0.39401284906932416
+149
+[0.0001]
+LR:  None
+train loss: 0.1266161526850459
+validation loss: 0.39440825863888995
+test loss: 0.3940909494368124
+150
+[0.0001]
+LR:  None
+train loss: 0.12671888314909557
+validation loss: 0.39476189092285413
+test loss: 0.39432798225796883
+151
+[0.0001]
+LR:  None
+train loss: 0.12605997383643872
+validation loss: 0.3940988545283568
+test loss: 0.39369710952814163
+152
+[0.0001]
+LR:  None
+train loss: 0.12602803355443262
+validation loss: 0.39397775621640485
+test loss: 0.3935405373239754
+153
+[0.0001]
+LR:  None
+train loss: 0.12610393611818205
+validation loss: 0.3945521890293702
+test loss: 0.39419569460379156
+154
+[0.0001]
+LR:  None
+train loss: 0.1260195767969732
+validation loss: 0.39463293224024576
+test loss: 0.39420529874497967
+155
+[0.0001]
+LR:  None
+train loss: 0.12575457752598157
+validation loss: 0.39411585548897193
+test loss: 0.39371818643431017
+156
+[0.0001]
+LR:  None
+train loss: 0.1255698541695031
+validation loss: 0.39374167055304743
+test loss: 0.393441758484407
+157
+[0.0001]
+LR:  None
+train loss: 0.12545008108955227
+validation loss: 0.3939053330789436
+test loss: 0.3936151312932935
+158
+[0.0001]
+LR:  None
+train loss: 0.1254526620464906
+validation loss: 0.39437951723340914
+test loss: 0.39382844130707617
+159
+[0.0001]
+LR:  None
+train loss: 0.1253273900365715
+validation loss: 0.39425097448679775
+test loss: 0.39393394490104966
+160
+[0.0001]
+LR:  None
+train loss: 0.1252741573438709
+validation loss: 0.3942447938793544
+test loss: 0.39373963124074524
+161
+[0.0001]
+LR:  None
+train loss: 0.12505096740711086
+validation loss: 0.39419088234477967
+test loss: 0.39392663661641386
+162
+[0.0001]
+LR:  None
+train loss: 0.1250385749819465
+validation loss: 0.39452457995682566
+test loss: 0.3941829969043355
+163
+[0.0001]
+LR:  None
+train loss: 0.12519065689945003
+validation loss: 0.3945937539809254
+test loss: 0.3942206261847778
+164
+[0.0001]
+LR:  None
+train loss: 0.12466834409899644
+validation loss: 0.39422762676269807
+test loss: 0.39382539331335864
+165
+[0.0001]
+LR:  None
+train loss: 0.12477813445269231
+validation loss: 0.39426881578919365
+test loss: 0.3940046749222593
+166
+[0.0001]
+LR:  None
+train loss: 0.12463393490934038
+validation loss: 0.3942495381817749
+test loss: 0.3938157247810269
+167
+[0.0001]
+LR:  None
+train loss: 0.12440743598341432
+validation loss: 0.39368675530295694
+test loss: 0.3933967837263411
+168
+[0.0001]
+LR:  None
+train loss: 0.12452074111565428
+validation loss: 0.3942027011701946
+test loss: 0.39379122940275035
+169
+[0.0001]
+LR:  None
+train loss: 0.12452171036798852
+validation loss: 0.39417931526890326
+test loss: 0.3938693592558503
+170
+[0.0001]
+LR:  None
+train loss: 0.12436257286663693
+validation loss: 0.3940850504988341
+test loss: 0.3937033889778894
+171
+[0.0001]
+LR:  None
+train loss: 0.12395571111102215
+validation loss: 0.3939077261495914
+test loss: 0.39354731912591334
+172
+[0.0001]
+LR:  None
+train loss: 0.12418926379456997
+validation loss: 0.39382631959504927
+test loss: 0.39339572956998825
+173
+[0.0001]
+LR:  None
+train loss: 0.12388404646982701
+validation loss: 0.3944039804102351
+test loss: 0.39411990117245566
+174
+[0.0001]
+LR:  None
+train loss: 0.12410131043394523
+validation loss: 0.394728905655673
+test loss: 0.39438488776623526
+175
+[0.0001]
+LR:  None
+train loss: 0.1237411495299724
+validation loss: 0.3938753045515785
+test loss: 0.3935788234104206
+176
+[0.0001]
+LR:  None
+train loss: 0.12363093007988442
+validation loss: 0.39393223116663256
+test loss: 0.39374070875109046
+177
+[0.0001]
+LR:  None
+train loss: 0.12334463831395297
+validation loss: 0.39454167891867997
+test loss: 0.3942267380246962
+178
+[0.0001]
+LR:  None
+train loss: 0.12336562497620239
+validation loss: 0.39415188272696217
+test loss: 0.39375773522152363
+179
+[0.0001]
+LR:  None
+train loss: 0.12329541766187217
+validation loss: 0.3942367885149733
+test loss: 0.39399342379931657
+180
+[0.0001]
+LR:  None
+train loss: 0.12326344728112772
+validation loss: 0.3942009487318485
+test loss: 0.39381622447964815
+181
+[0.0001]
+LR:  None
+train loss: 0.12302907798996043
+validation loss: 0.39438261952323084
+test loss: 0.39406347756742977
+182
+[0.0001]
+LR:  None
+train loss: 0.1228245416249253
+validation loss: 0.39412296982755124
+test loss: 0.3937880847795608
+183
+[0.0001]
+LR:  None
+train loss: 0.12328033672598414
+validation loss: 0.3944988355235019
+test loss: 0.3943182917470109
+184
+[0.0001]
+LR:  None
+train loss: 0.12272192759426077
+validation loss: 0.3939338154358846
+test loss: 0.39362822994139973
+185
+[0.0001]
+LR:  None
+train loss: 0.12306936278539146
+validation loss: 0.3942501513546167
+test loss: 0.3939966896653801
+186
+[0.0001]
+LR:  None
+train loss: 0.12270108292180383
+validation loss: 0.39439747221658555
+test loss: 0.3940837024666026
+187
+[0.0001]
+LR:  None
+train loss: 0.12276937688064278
+validation loss: 0.3947281678836092
+test loss: 0.39454917855817
+ES epoch: 167
+Test data
+Skills for tau_11
+R^2: 0.9828
+Correlation: 0.9923
+
+Skills for tau_12
+R^2: 0.9409
+Correlation: 0.9704
+
+Skills for tau_13
+R^2: 0.8613
+Correlation: 0.9287
+
+Skills for tau_22
+R^2: 0.8932
+Correlation: 0.9485
+
+Skills for tau_23
+R^2: 0.8120
+Correlation: 0.9014
+
+Skills for tau_33
+R^2: 0.7680
+Correlation: 0.8846
+
+Validation data
+Skills for tau_11
+R^2: 0.9827
+Correlation: 0.9922
+
+Skills for tau_12
+R^2: 0.9405
+Correlation: 0.9702
+
+Skills for tau_13
+R^2: 0.8601
+Correlation: 0.9281
+
+Skills for tau_22
+R^2: 0.8923
+Correlation: 0.9481
+
+Skills for tau_23
+R^2: 0.8117
+Correlation: 0.9012
+
+Skills for tau_33
+R^2: 0.7683
+Correlation: 0.8849
+
+Train data
+Skills for tau_11
+R^2: 0.9958
+Correlation: 0.9979
+
+Skills for tau_12
+R^2: 0.9822
+Correlation: 0.9911
+
+Skills for tau_13
+R^2: 0.7729
+Correlation: 0.8813
+
+Skills for tau_22
+R^2: 0.9340
+Correlation: 0.9674
+
+Skills for tau_23
+R^2: 0.8216
+Correlation: 0.9081
+
+Skills for tau_33
+R^2: 0.4536
+Correlation: 0.7069
+
+Train Files:
+<xarray.Dataset>
+Dimensions:  (z: 128, y: 64, x: 64, time: 44)
+Coordinates:
+  * z        (z) float64 0.2824 0.4236 0.5648 0.706 ... 17.79 17.93 18.07 18.22
+  * y        (y) float64 0.1712 0.5991 1.027 1.455 ... 25.85 26.27 26.7 27.13
+  * x        (x) float64 0.1712 0.5991 1.027 1.455 ... 25.85 26.27 26.7 27.13
+  * time     (time) int64 590200 590400 590600 590800 ... 608000 609000 610000
+Data variables:
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    tau12    (z, y, x, time) float64 ...
+    tau13    (z, y, x, time) float64 ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+<xarray.Dataset>
+Dimensions:  (z: 128, y: 64, x: 64, time: 15)
+Coordinates:
+  * z        (z) float64 0.2824 0.4236 0.5648 0.706 ... 17.79 17.93 18.07 18.22
+  * y        (y) float64 0.214 0.6419 1.07 1.498 ... 25.89 26.32 26.74 27.17
+  * x        (x) float64 0.214 0.6419 1.07 1.498 ... 25.89 26.32 26.74 27.17
+  * time     (time) int64 616000 617000 618000 619000 ... 628000 629000 630000
+Data variables:
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    tau12    (z, y, x, time) float64 ...
+    tau13    (z, y, x, time) float64 ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+output shape is (108911, 6)
+input shape should be (108911, 4, 3, 3, 3)
+input shape to do 3rd dimension as channel in R2Conv is (108911, 12, 3, 3)
+Test Files:
+<xarray.Dataset>
+Dimensions:  (z: 128, y: 64, x: 64, time: 3)
+Coordinates:
+  * z        (z) float64 0.2824 0.4236 0.5648 0.706 ... 17.79 17.93 18.07 18.22
+  * y        (y) float64 0.1997 0.6276 1.056 1.483 ... 25.87 26.3 26.73 27.16
+  * x        (x) float64 0.1997 0.6276 1.056 1.483 ... 25.87 26.3 26.73 27.16
+  * time     (time) int64 1368000 1377000 1386000
+Data variables:
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    tau12    (z, y, x, time) float64 ...
+    tau13    (z, y, x, time) float64 ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+output shape is (1155072, 6)
+input shape should be (1155072, 4, 3, 3, 3)
+input shape to do 3rd dimension as channel in R2Conv is (1155072, 12, 3, 3)
+Lossweights:
+[  197484.0346  1110584.2943  8222179.9558  1857307.2192 12069799.724   5019240.8726]
+0
+[0.01]
+LR:  None
+train loss: 0.1698650429105023
+validation loss: 0.4794776603437126
+test loss: 0.47923484246729836
+1
+[0.001]
+LR:  None
+train loss: 0.15916262675009654
+validation loss: 0.4533257505412495
+test loss: 0.4529286454951341
+2
+[0.0001]
+LR:  None
+train loss: 0.1586042574497639
+validation loss: 0.45107524830660783
+test loss: 0.4507682213073271
+3
+[0.0001]
+LR:  None
+train loss: 0.15789072771220924
+validation loss: 0.4496173062391061
+test loss: 0.44929982243996264
+4
+[0.0001]
+LR:  None
+train loss: 0.15757364219363426
+validation loss: 0.4488906065679312
+test loss: 0.44844583009380656
+5
+[0.0001]
+LR:  None
+train loss: 0.15726887724007105
+validation loss: 0.44794675503887676
+test loss: 0.447582597974761
+6
+[0.0001]
+LR:  None
+train loss: 0.1567674823005571
+validation loss: 0.4473115830281649
+test loss: 0.4469256672674076
+7
+[0.0001]
+LR:  None
+train loss: 0.1564732948956452
+validation loss: 0.44558318935789504
+test loss: 0.44535236006149714
+8
+[0.0001]
+LR:  None
+train loss: 0.15628144701158916
+validation loss: 0.44565451733372907
+test loss: 0.4452900266634182
+9
+[0.0001]
+LR:  None
+train loss: 0.15568418730350686
+validation loss: 0.444044358477246
+test loss: 0.44370272111915987
+10
+[0.0001]
+LR:  None
+train loss: 0.1553130389117795
+validation loss: 0.4432991949670095
+test loss: 0.442936141863919
+11
+[0.0001]
+LR:  None
+train loss: 0.1548161435343761
+validation loss: 0.4422949455332625
+test loss: 0.44186066022520415
+12
+[0.0001]
+LR:  None
+train loss: 0.15475338248976384
+validation loss: 0.4417250064277141
+test loss: 0.4414189385410584
+13
+[0.0001]
+LR:  None
+train loss: 0.15416773588280178
+validation loss: 0.44125352790571076
+test loss: 0.44097723124448795
+14
+[0.0001]
+LR:  None
+train loss: 0.15406048583014703
+validation loss: 0.43968357901010385
+test loss: 0.4393771991471596
+15
+[0.0001]
+LR:  None
+train loss: 0.15349417825471431
+validation loss: 0.43853712719681864
+test loss: 0.4383420103817273
+16
+[0.0001]
+LR:  None
+train loss: 0.15319157086562207
+validation loss: 0.4377085396302222
+test loss: 0.43748496078180676
+17
+[0.0001]
+LR:  None
+train loss: 0.15285600855473389
+validation loss: 0.43684224505621183
+test loss: 0.4365464207617032
+18
+[0.0001]
+LR:  None
+train loss: 0.1524725256740742
+validation loss: 0.4365748228695025
+test loss: 0.43630120696174907
+19
+[0.0001]
+LR:  None
+train loss: 0.15232404678308886
+validation loss: 0.4352525458288668
+test loss: 0.4349902177484076
+20
+[0.0001]
+LR:  None
+train loss: 0.15176494920050543
+validation loss: 0.43401005634860945
+test loss: 0.4337801559460722
+21
+[0.0001]
+LR:  None
+train loss: 0.15157249915160242
+validation loss: 0.4336402456903678
+test loss: 0.4334703818896187
+22
+[0.0001]
+LR:  None
+train loss: 0.15133346306908294
+validation loss: 0.43227189049205406
+test loss: 0.432087331972656
+23
+[0.0001]
+LR:  None
+train loss: 0.15083168684194787
+validation loss: 0.43157322049113656
+test loss: 0.4313919656223041
+24
+[0.0001]
+LR:  None
+train loss: 0.1506438975214557
+validation loss: 0.43128014168636125
+test loss: 0.43101605127759607
+25
+[0.0001]
+LR:  None
+train loss: 0.1501955379661832
+validation loss: 0.4292661992980648
+test loss: 0.42907691510609425
+26
+[0.0001]
+LR:  None
+train loss: 0.14981343763757282
+validation loss: 0.42898353002174894
+test loss: 0.4288145182453748
+27
+[0.0001]
+LR:  None
+train loss: 0.14959736967315737
+validation loss: 0.4282382428113271
+test loss: 0.4281398172976111
+28
+[0.0001]
+LR:  None
+train loss: 0.1494005887633321
+validation loss: 0.42821905661341125
+test loss: 0.4281004328970102
+29
+[0.0001]
+LR:  None
+train loss: 0.1491478920811682
+validation loss: 0.427136392657344
+test loss: 0.42698975550484125
+30
+[0.0001]
+LR:  None
+train loss: 0.1489607723610862
+validation loss: 0.42673542858093516
+test loss: 0.4265732241891682
+31
+[0.0001]
+LR:  None
+train loss: 0.14856431986331914
+validation loss: 0.425392797268002
+test loss: 0.4252103285223004
+32
+[0.0001]
+LR:  None
+train loss: 0.1482200183495182
+validation loss: 0.4243765146425949
+test loss: 0.42419596878696625
+33
+[0.0001]
+LR:  None
+train loss: 0.1479096522196751
+validation loss: 0.423598238108951
+test loss: 0.4233884988786382
+34
+[0.0001]
+LR:  None
+train loss: 0.14766547317288808
+validation loss: 0.42316638309351556
+test loss: 0.42311709096183764
+35
+[0.0001]
+LR:  None
+train loss: 0.14746837850112246
+validation loss: 0.42294588977882913
+test loss: 0.42291803973486747
+36
+[0.0001]
+LR:  None
+train loss: 0.14720495134076816
+validation loss: 0.42194682647446163
+test loss: 0.4218887857426164
+37
+[0.0001]
+LR:  None
+train loss: 0.14724804261414975
+validation loss: 0.4219554889677238
+test loss: 0.42187943153324364
+38
+[0.0001]
+LR:  None
+train loss: 0.14665457636889587
+validation loss: 0.4204415584965893
+test loss: 0.4203507671635852
+39
+[0.0001]
+LR:  None
+train loss: 0.14651914413915382
+validation loss: 0.4203416876026761
+test loss: 0.4202983239450469
+40
+[0.0001]
+LR:  None
+train loss: 0.14593729314446208
+validation loss: 0.41954771518070494
+test loss: 0.4195809453170678
+41
+[0.0001]
+LR:  None
+train loss: 0.14590541961816714
+validation loss: 0.4190581434548575
+test loss: 0.4189342133016904
+42
+[0.0001]
+LR:  None
+train loss: 0.1457180966877354
+validation loss: 0.4181768002036059
+test loss: 0.418093464674439
+43
+[0.0001]
+LR:  None
+train loss: 0.14539728727812573
+validation loss: 0.4176002140925851
+test loss: 0.41749762363238124
+44
+[0.0001]
+LR:  None
+train loss: 0.14521972706069122
+validation loss: 0.4170674767893365
+test loss: 0.4169033478862124
+45
+[0.0001]
+LR:  None
+train loss: 0.1448664658590124
+validation loss: 0.41620607841321744
+test loss: 0.4161854655786516
+46
+[0.0001]
+LR:  None
+train loss: 0.14489705074777817
+validation loss: 0.41641157983341215
+test loss: 0.4163283461252103
+47
+[0.0001]
+LR:  None
+train loss: 0.14435079481626117
+validation loss: 0.41617350472024744
+test loss: 0.4160940081947592
+48
+[0.0001]
+LR:  None
+train loss: 0.14416891239318733
+validation loss: 0.41504539932727763
+test loss: 0.41500178655006204
+49
+[0.0001]
+LR:  None
+train loss: 0.144735786173442
+validation loss: 0.41587725571240536
+test loss: 0.41594465229118455
+50
+[0.0001]
+LR:  None
+train loss: 0.14360177043510314
+validation loss: 0.41441141264497316
+test loss: 0.414339296519311
+51
+[0.0001]
+LR:  None
+train loss: 0.143520363823144
+validation loss: 0.41390721347457243
+test loss: 0.41386313820735005
+52
+[0.0001]
+LR:  None
+train loss: 0.14317585312455153
+validation loss: 0.4133258661939789
+test loss: 0.4132727367280886
+53
+[0.0001]
+LR:  None
+train loss: 0.14336092956133853
+validation loss: 0.41287684754346093
+test loss: 0.41281854569388504
+54
+[0.0001]
+LR:  None
+train loss: 0.14283489665282914
+validation loss: 0.4122074777516189
+test loss: 0.4121913690996572
+55
+[0.0001]
+LR:  None
+train loss: 0.14260188067579763
+validation loss: 0.41237684462245494
+test loss: 0.41223460202537177
+56
+[0.0001]
+LR:  None
+train loss: 0.1426601560228951
+validation loss: 0.41149425175076493
+test loss: 0.41138710335802975
+57
+[0.0001]
+LR:  None
+train loss: 0.1423794848177469
+validation loss: 0.4117306287431781
+test loss: 0.41159122868643117
+58
+[0.0001]
+LR:  None
+train loss: 0.14220344955262013
+validation loss: 0.411150117595702
+test loss: 0.4109911999233773
+59
+[0.0001]
+LR:  None
+train loss: 0.14195988686132263
+validation loss: 0.4106734563195127
+test loss: 0.41058824981279435
+60
+[0.0001]
+LR:  None
+train loss: 0.1415140226513175
+validation loss: 0.409841267457547
+test loss: 0.40977538550309556
+61
+[0.0001]
+LR:  None
+train loss: 0.14127261557070306
+validation loss: 0.40972473306499835
+test loss: 0.4096274230702812
+62
+[0.0001]
+LR:  None
+train loss: 0.14123262661676236
+validation loss: 0.4092727129823047
+test loss: 0.40916153180484355
+63
+[0.0001]
+LR:  None
+train loss: 0.1410625585420053
+validation loss: 0.4093932397044148
+test loss: 0.40926206209348825
+64
+[0.0001]
+LR:  None
+train loss: 0.140880414751766
+validation loss: 0.4090003161504561
+test loss: 0.408925140026275
+65
+[0.0001]
+LR:  None
+train loss: 0.14064590708200828
+validation loss: 0.4081862437765863
+test loss: 0.40811366336713173
+66
+[0.0001]
+LR:  None
+train loss: 0.14050594856023713
+validation loss: 0.4085441964281256
+test loss: 0.40843903515207414
+67
+[0.0001]
+LR:  None
+train loss: 0.14022700237575428
+validation loss: 0.4079739871981714
+test loss: 0.4078132716768539
+68
+[0.0001]
+LR:  None
+train loss: 0.14026739876136363
+validation loss: 0.4077532894250753
+test loss: 0.4076481377765085
+69
+[0.0001]
+LR:  None
+train loss: 0.13994934870117218
+validation loss: 0.40699645925844863
+test loss: 0.4068875584808867
+70
+[0.0001]
+LR:  None
+train loss: 0.13987837940746026
+validation loss: 0.4069187336663244
+test loss: 0.4067904351693449
+71
+[0.0001]
+LR:  None
+train loss: 0.13952732932327175
+validation loss: 0.40664071437567373
+test loss: 0.4066123666324453
+72
+[0.0001]
+LR:  None
+train loss: 0.13967746477220713
+validation loss: 0.4065981328257305
+test loss: 0.4064666550595437
+73
+[0.0001]
+LR:  None
+train loss: 0.13897936262478378
+validation loss: 0.40527329410260843
+test loss: 0.40513139759698386
+74
+[0.0001]
+LR:  None
+train loss: 0.13872767360087704
+validation loss: 0.405056329512019
+test loss: 0.40497144381123085
+75
+[0.0001]
+LR:  None
+train loss: 0.13862109311553894
+validation loss: 0.40450282580772823
+test loss: 0.4044200219886342
+76
+[0.0001]
+LR:  None
+train loss: 0.13861046803568117
+validation loss: 0.40512925179743375
+test loss: 0.4050610030529234
+77
+[0.0001]
+LR:  None
+train loss: 0.13827424657372694
+validation loss: 0.4044744757020445
+test loss: 0.4043771660496387
+78
+[0.0001]
+LR:  None
+train loss: 0.1381263915207412
+validation loss: 0.40393291271243703
+test loss: 0.4038340618391939
+79
+[0.0001]
+LR:  None
+train loss: 0.1379673965800907
+validation loss: 0.40341014498455957
+test loss: 0.4032135227754842
+80
+[0.0001]
+LR:  None
+train loss: 0.13788033518170598
+validation loss: 0.4032363370203025
+test loss: 0.4030662421621248
+81
+[0.0001]
+LR:  None
+train loss: 0.13738704242249283
+validation loss: 0.402996920745632
+test loss: 0.40284330899461146
+82
+[0.0001]
+LR:  None
+train loss: 0.1372198525636903
+validation loss: 0.4026256281533673
+test loss: 0.40259092629201043
+83
+[0.0001]
+LR:  None
+train loss: 0.13707094043189424
+validation loss: 0.40262885637429613
+test loss: 0.4024719223537571
+84
+[0.0001]
+LR:  None
+train loss: 0.13669978468237456
+validation loss: 0.4016906311540612
+test loss: 0.40163303267597616
+85
+[0.0001]
+LR:  None
+train loss: 0.13672429119373403
+validation loss: 0.40205822966119314
+test loss: 0.40190598369974834
+86
+[0.0001]
+LR:  None
+train loss: 0.13627298971058938
+validation loss: 0.4018783810568102
+test loss: 0.4016757050427099
+87
+[0.0001]
+LR:  None
+train loss: 0.13630762352393244
+validation loss: 0.40118476053373286
+test loss: 0.40108421236631275
+88
+[0.0001]
+LR:  None
+train loss: 0.13597367329547524
+validation loss: 0.4006609539414576
+test loss: 0.4005534478579413
+89
+[0.0001]
+LR:  None
+train loss: 0.13567156753039455
+validation loss: 0.4001021567798216
+test loss: 0.39994363520627957
+90
+[0.0001]
+LR:  None
+train loss: 0.1356236523064786
+validation loss: 0.40018649315031124
+test loss: 0.40005306684995684
+91
+[0.0001]
+LR:  None
+train loss: 0.13537515646096018
+validation loss: 0.3993611936560671
+test loss: 0.3992373261331393
+92
+[0.0001]
+LR:  None
+train loss: 0.1352442981891318
+validation loss: 0.3991294048953572
+test loss: 0.39901428459473476
+93
+[0.0001]
+LR:  None
+train loss: 0.13490090903978727
+validation loss: 0.3987429128936988
+test loss: 0.39862253629779065
+94
+[0.0001]
+LR:  None
+train loss: 0.13468703280519673
+validation loss: 0.3989381912271124
+test loss: 0.39879410410945365
+95
+[0.0001]
+LR:  None
+train loss: 0.13454601674234432
+validation loss: 0.3983597548272577
+test loss: 0.39823017442130426
+96
+[0.0001]
+LR:  None
+train loss: 0.13423723911624957
+validation loss: 0.3984178491866662
+test loss: 0.3982766232253606
+97
+[0.0001]
+LR:  None
+train loss: 0.13421560799659688
+validation loss: 0.3983466082922386
+test loss: 0.3982025190578829
+98
+[0.0001]
+LR:  None
+train loss: 0.13406614714737738
+validation loss: 0.3977145815261556
+test loss: 0.39765922879039234
+99
+[0.0001]
+LR:  None
+train loss: 0.13393024752643176
+validation loss: 0.3970554100712809
+test loss: 0.39695435538048
+100
+[0.0001]
+LR:  None
+train loss: 0.133645834893418
+validation loss: 0.3974785358720923
+test loss: 0.39732589084824943
+101
+[0.0001]
+LR:  None
+train loss: 0.1332577073554947
+validation loss: 0.3967884328003649
+test loss: 0.39667460586639436
+102
+[0.0001]
+LR:  None
+train loss: 0.13328303471156228
+validation loss: 0.3971087515945608
+test loss: 0.3969610317400496
+103
+[0.0001]
+LR:  None
+train loss: 0.13321975118678678
+validation loss: 0.39646608651459353
+test loss: 0.39631366504580445
+104
+[0.0001]
+LR:  None
+train loss: 0.13275243813569543
+validation loss: 0.3963254763255578
+test loss: 0.396259206141551
+105
+[0.0001]
+LR:  None
+train loss: 0.13274287642214694
+validation loss: 0.3954984908765503
+test loss: 0.39536587963399095
+106
+[0.0001]
+LR:  None
+train loss: 0.13223414620079263
+validation loss: 0.39564184286646026
+test loss: 0.3954684361719087
+107
+[0.0001]
+LR:  None
+train loss: 0.1324099993444635
+validation loss: 0.3954359216701914
+test loss: 0.3953339958836195
+108
+[0.0001]
+LR:  None
+train loss: 0.13212461609044168
+validation loss: 0.39564964107261
+test loss: 0.395556956097405
+109
+[0.0001]
+LR:  None
+train loss: 0.13176521695929466
+validation loss: 0.3945335886286835
+test loss: 0.39440745671834015
+110
+[0.0001]
+LR:  None
+train loss: 0.13155668832787706
+validation loss: 0.3943735655557364
+test loss: 0.3942760377291957
+111
+[0.0001]
+LR:  None
+train loss: 0.13166540082353473
+validation loss: 0.39447972079989446
+test loss: 0.39435894533995514
+112
+[0.0001]
+LR:  None
+train loss: 0.13132734493634066
+validation loss: 0.3942312710903571
+test loss: 0.3941568458865885
+113
+[0.0001]
+LR:  None
+train loss: 0.13131254458412012
+validation loss: 0.39444753348995626
+test loss: 0.3943351875362937
+114
+[0.0001]
+LR:  None
+train loss: 0.13120561891721919
+validation loss: 0.39441744697438735
+test loss: 0.39435967078443684
+115
+[0.0001]
+LR:  None
+train loss: 0.13074122608500677
+validation loss: 0.39379734215908774
+test loss: 0.3937083261571602
+116
+[0.0001]
+LR:  None
+train loss: 0.13062372839329064
+validation loss: 0.393878168625341
+test loss: 0.393838023484079
+117
+[0.0001]
+LR:  None
+train loss: 0.13073364723741937
+validation loss: 0.3936573744179686
+test loss: 0.39361899217662333
+118
+[0.0001]
+LR:  None
+train loss: 0.13041473603068654
+validation loss: 0.3934837637082769
+test loss: 0.393469990895361
+119
+[0.0001]
+LR:  None
+train loss: 0.1304062594035659
+validation loss: 0.3936950066878895
+test loss: 0.39360771820340856
+120
+[0.0001]
+LR:  None
+train loss: 0.130361458396313
+validation loss: 0.39317191950597663
+test loss: 0.3931237049505446
+121
+[0.0001]
+LR:  None
+train loss: 0.12983717015297655
+validation loss: 0.39286488496775546
+test loss: 0.39269732265804097
+122
+[0.0001]
+LR:  None
+train loss: 0.12981950542531923
+validation loss: 0.3932070608573886
+test loss: 0.39305873174556133
+123
+[0.0001]
+LR:  None
+train loss: 0.12954636515463208
+validation loss: 0.3929571006666622
+test loss: 0.3928836913124024
+124
+[0.0001]
+LR:  None
+train loss: 0.1294236106012574
+validation loss: 0.3926644513352583
+test loss: 0.3926084279648957
+125
+[0.0001]
+LR:  None
+train loss: 0.12925922266624582
+validation loss: 0.3929216942275602
+test loss: 0.39291567422892437
+126
+[0.0001]
+LR:  None
+train loss: 0.1299286995902428
+validation loss: 0.39309268859300356
+test loss: 0.3930360309888466
+127
+[0.0001]
+LR:  None
+train loss: 0.12922303875790037
+validation loss: 0.39279096166496036
+test loss: 0.39271542666969383
+128
+[0.0001]
+LR:  None
+train loss: 0.12901464126635995
+validation loss: 0.3927419201810821
+test loss: 0.3926538064294858
+129
+[0.0001]
+LR:  None
+train loss: 0.12883792065529018
+validation loss: 0.39196100833710545
+test loss: 0.3918547834357244
+130
+[0.0001]
+LR:  None
+train loss: 0.12853335628217197
+validation loss: 0.3919299060086618
+test loss: 0.3918203531794906
+131
+[0.0001]
+LR:  None
+train loss: 0.12892879121421585
+validation loss: 0.39268160367030935
+test loss: 0.3924709695697408
+132
+[0.0001]
+LR:  None
+train loss: 0.12845530938779826
+validation loss: 0.39210262589013856
+test loss: 0.39189549884352987
+133
+[0.0001]
+LR:  None
+train loss: 0.12833267933686854
+validation loss: 0.3924827325012468
+test loss: 0.39236685620603357
+134
+[0.0001]
+LR:  None
+train loss: 0.12832303580564725
+validation loss: 0.3923123261166074
+test loss: 0.39220845343256133
+135
+[0.0001]
+LR:  None
+train loss: 0.12785003929844055
+validation loss: 0.3917085618885137
+test loss: 0.39158307534569886
+136
+[0.0001]
+LR:  None
+train loss: 0.12782782388127395
+validation loss: 0.39213400297611045
+test loss: 0.39200742187406246
+137
+[0.0001]
+LR:  None
+train loss: 0.12766527385714774
+validation loss: 0.39139235228618025
+test loss: 0.391360697792469
+138
+[0.0001]
+LR:  None
+train loss: 0.12760600820328732
+validation loss: 0.3916359530781437
+test loss: 0.3914562329430011
+139
+[0.0001]
+LR:  None
+train loss: 0.12759552336956512
+validation loss: 0.3917565788796046
+test loss: 0.39163879675751123
+140
+[0.0001]
+LR:  None
+train loss: 0.1272363355808274
+validation loss: 0.391526898549275
+test loss: 0.39138505975922944
+141
+[0.0001]
+LR:  None
+train loss: 0.12731348426146666
+validation loss: 0.39165610445952576
+test loss: 0.3914755846777377
+142
+[0.0001]
+LR:  None
+train loss: 0.12697565022072846
+validation loss: 0.3911679368270834
+test loss: 0.39100303198044956
+143
+[0.0001]
+LR:  None
+train loss: 0.12711823427775085
+validation loss: 0.39103206036846616
+test loss: 0.3908628205625432
+144
+[0.0001]
+LR:  None
+train loss: 0.1268997434922655
+validation loss: 0.3913694708913677
+test loss: 0.3912814526650909
+145
+[0.0001]
+LR:  None
+train loss: 0.1267894429764623
+validation loss: 0.39126379088020863
+test loss: 0.3912232792096673
+146
+[0.0001]
+LR:  None
+train loss: 0.1266714892980059
+validation loss: 0.39177269206550025
+test loss: 0.39159725313122656
+147
+[0.0001]
+LR:  None
+train loss: 0.12650933815783913
+validation loss: 0.39124118900356425
+test loss: 0.3911038742658103
+148
+[0.0001]
+LR:  None
+train loss: 0.12645173054969427
+validation loss: 0.3911148802242422
+test loss: 0.3910250705422788
+149
+[0.0001]
+LR:  None
+train loss: 0.12645261063697835
+validation loss: 0.39170145322153344
+test loss: 0.3914881441916364
+150
+[0.0001]
+LR:  None
+train loss: 0.12669553331092726
+validation loss: 0.3911806673643778
+test loss: 0.39113661885931855
+151
+[0.0001]
+LR:  None
+train loss: 0.1261493758089984
+validation loss: 0.3910612755731877
+test loss: 0.3909880641254549
+152
+[0.0001]
+LR:  None
+train loss: 0.12586653792693928
+validation loss: 0.39122974097652263
+test loss: 0.3911060447037115
+153
+[0.0001]
+LR:  None
+train loss: 0.12611974522233982
+validation loss: 0.3912094610235887
+test loss: 0.3911236727924213
+154
+[0.0001]
+LR:  None
+train loss: 0.12571127783449004
+validation loss: 0.3912335838480353
+test loss: 0.39112100493160395
+155
+[0.0001]
+LR:  None
+train loss: 0.12558193826422465
+validation loss: 0.3909867639669488
+test loss: 0.3907847443210349
+156
+[0.0001]
+LR:  None
+train loss: 0.12558496431147503
+validation loss: 0.3911717828029617
+test loss: 0.39100526108665645
+157
+[0.0001]
+LR:  None
+train loss: 0.12528218156331455
+validation loss: 0.3910108779393439
+test loss: 0.3908673923285065
+158
+[0.0001]
+LR:  None
+train loss: 0.12542033622006032
+validation loss: 0.39139032982207567
+test loss: 0.39121253180480337
+159
+[0.0001]
+LR:  None
+train loss: 0.12509050439896696
+validation loss: 0.3912379677401121
+test loss: 0.39105129284792284
+160
+[0.0001]
+LR:  None
+train loss: 0.1251053297484368
+validation loss: 0.39134321038565584
+test loss: 0.39117509425893293
+161
+[0.0001]
+LR:  None
+train loss: 0.12488264165313345
+validation loss: 0.39087417253813184
+test loss: 0.39079397606503535
+162
+[0.0001]
+LR:  None
+train loss: 0.12498566380947988
+validation loss: 0.3912852456161196
+test loss: 0.39114371426577643
+163
+[0.0001]
+LR:  None
+train loss: 0.1251076055978311
+validation loss: 0.39109716314650905
+test loss: 0.3909642992765768
+164
+[0.0001]
+LR:  None
+train loss: 0.12461763100694209
+validation loss: 0.3910853934021603
+test loss: 0.39095564709876895
+165
+[0.0001]
+LR:  None
+train loss: 0.1244934237649512
+validation loss: 0.39089898087494235
+test loss: 0.39074176187177706
+166
+[0.0001]
+LR:  None
+train loss: 0.12447992202429281
+validation loss: 0.39141750200997427
+test loss: 0.3912714566899753
+167
+[0.0001]
+LR:  None
+train loss: 0.12434203387562229
+validation loss: 0.39092538223412865
+test loss: 0.39085721423387615
+168
+[0.0001]
+LR:  None
+train loss: 0.12433317740506418
+validation loss: 0.3913949546033044
+test loss: 0.39122433314614513
+169
+[0.0001]
+LR:  None
+train loss: 0.12405109599391394
+validation loss: 0.3910737284876238
+test loss: 0.39095435235783854
+170
+[0.0001]
+LR:  None
+train loss: 0.12406747424797548
+validation loss: 0.3914191756420436
+test loss: 0.39123950702737426
+171
+[0.0001]
+LR:  None
+train loss: 0.12380941085738191
+validation loss: 0.39144956988856716
+test loss: 0.39129728089144905
+172
+[0.0001]
+LR:  None
+train loss: 0.12393502065041838
+validation loss: 0.3912487427270743
+test loss: 0.39113213823303133
+173
+[0.0001]
+LR:  None
+train loss: 0.12366581980032855
+validation loss: 0.3914878221596104
+test loss: 0.3912681028047477
+174
+[0.0001]
+LR:  None
+train loss: 0.12356768587882093
+validation loss: 0.391061798173029
+test loss: 0.39098809444721067
+175
+[0.0001]
+LR:  None
+train loss: 0.12349479582291889
+validation loss: 0.3921060501289162
+test loss: 0.3918339709860054
+176
+[0.0001]
+LR:  None
+train loss: 0.12348627065994809
+validation loss: 0.39133258843639895
+test loss: 0.39108440882356543
+177
+[0.0001]
+LR:  None
+train loss: 0.12332044757380212
+validation loss: 0.3921747433606413
+test loss: 0.3919271042497942
+178
+[0.0001]
+LR:  None
+train loss: 0.1231749272180529
+validation loss: 0.39213497396180175
+test loss: 0.3919376977855343
+179
+[0.0001]
+LR:  None
+train loss: 0.12299558501928987
+validation loss: 0.3911942687256643
+test loss: 0.39105951157499214
+180
+[0.0001]
+LR:  None
+train loss: 0.12289204244472014
+validation loss: 0.3914327224249503
+test loss: 0.39126520824066263
+181
+[0.0001]
+LR:  None
+train loss: 0.12282331292026388
+validation loss: 0.39135064318806223
+test loss: 0.39117567756694904
+ES epoch: 161
+Test data
+Skills for tau_11
+R^2: 0.9843
+Correlation: 0.9927
+
+Skills for tau_12
+R^2: 0.9413
+Correlation: 0.9703
+
+Skills for tau_13
+R^2: 0.8617
+Correlation: 0.9288
+
+Skills for tau_22
+R^2: 0.8899
+Correlation: 0.9467
+
+Skills for tau_23
+R^2: 0.8130
+Correlation: 0.9021
+
+Skills for tau_33
+R^2: 0.7607
+Correlation: 0.8814
+
+Validation data
+Skills for tau_11
+R^2: 0.9841
+Correlation: 0.9927
+
+Skills for tau_12
+R^2: 0.9410
+Correlation: 0.9702
+
+Skills for tau_13
+R^2: 0.8623
+Correlation: 0.9290
+
+Skills for tau_22
+R^2: 0.8872
+Correlation: 0.9451
+
+Skills for tau_23
+R^2: 0.8115
+Correlation: 0.9013
+
+Skills for tau_33
+R^2: 0.7582
+Correlation: 0.8799
+
+Train data
+Skills for tau_11
+R^2: 0.9957
+Correlation: 0.9979
+
+Skills for tau_12
+R^2: 0.9844
+Correlation: 0.9924
+
+Skills for tau_13
+R^2: 0.7340
+Correlation: 0.8628
+
+Skills for tau_22
+R^2: 0.9207
+Correlation: 0.9618
+
+Skills for tau_23
+R^2: 0.8194
+Correlation: 0.9060
+
+Skills for tau_33
+R^2: 0.3574
+Correlation: 0.6248
+
+Train Files:
+<xarray.Dataset>
+Dimensions:  (z: 128, y: 64, x: 64, time: 44)
+Coordinates:
+  * z        (z) float64 0.2824 0.4236 0.5648 0.706 ... 17.79 17.93 18.07 18.22
+  * y        (y) float64 0.1712 0.5991 1.027 1.455 ... 25.85 26.27 26.7 27.13
+  * x        (x) float64 0.1712 0.5991 1.027 1.455 ... 25.85 26.27 26.7 27.13
+  * time     (time) int64 590200 590400 590600 590800 ... 608000 609000 610000
+Data variables:
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    tau12    (z, y, x, time) float64 ...
+    tau13    (z, y, x, time) float64 ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+<xarray.Dataset>
+Dimensions:  (z: 128, y: 64, x: 64, time: 15)
+Coordinates:
+  * z        (z) float64 0.2824 0.4236 0.5648 0.706 ... 17.79 17.93 18.07 18.22
+  * y        (y) float64 0.214 0.6419 1.07 1.498 ... 25.89 26.32 26.74 27.17
+  * x        (x) float64 0.214 0.6419 1.07 1.498 ... 25.89 26.32 26.74 27.17
+  * time     (time) int64 616000 617000 618000 619000 ... 628000 629000 630000
+Data variables:
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    tau12    (z, y, x, time) float64 ...
+    tau13    (z, y, x, time) float64 ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+output shape is (108785, 6)
+input shape should be (108785, 4, 3, 3, 3)
+input shape to do 3rd dimension as channel in R2Conv is (108785, 12, 3, 3)
+Test Files:
+<xarray.Dataset>
+Dimensions:  (z: 128, y: 64, x: 64, time: 3)
+Coordinates:
+  * z        (z) float64 0.2824 0.4236 0.5648 0.706 ... 17.79 17.93 18.07 18.22
+  * y        (y) float64 0.1997 0.6276 1.056 1.483 ... 25.87 26.3 26.73 27.16
+  * x        (x) float64 0.1997 0.6276 1.056 1.483 ... 25.87 26.3 26.73 27.16
+  * time     (time) int64 1368000 1377000 1386000
+Data variables:
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    tau12    (z, y, x, time) float64 ...
+    tau13    (z, y, x, time) float64 ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+output shape is (1155072, 6)
+input shape should be (1155072, 4, 3, 3, 3)
+input shape to do 3rd dimension as channel in R2Conv is (1155072, 12, 3, 3)
+Lossweights:
+[  201370.4938  1134605.8178  8246561.8389  1873066.1589 12222939.1173  5103726.4063]
+0
+[0.01]
+LR:  None
+train loss: 0.17160025313319976
+validation loss: 0.48790137531300376
+test loss: 0.4881684801708665
+1
+[0.001]
+LR:  None
+train loss: 0.16015867895195512
+validation loss: 0.4596328974580671
+test loss: 0.4597709981189754
+2
+[0.0001]
+LR:  None
+train loss: 0.15871826615255796
+validation loss: 0.45646531407973506
+test loss: 0.4563850804718356
+3
+[0.0001]
+LR:  None
+train loss: 0.1584934561740011
+validation loss: 0.45576622113200627
+test loss: 0.45550133291955347
+4
+[0.0001]
+LR:  None
+train loss: 0.1580466324300753
+validation loss: 0.4543149270132049
+test loss: 0.4543446813905307
+5
+[0.0001]
+LR:  None
+train loss: 0.15784192547978781
+validation loss: 0.45393296951809725
+test loss: 0.4539143833382639
+6
+[0.0001]
+LR:  None
+train loss: 0.1575745401588746
+validation loss: 0.4532985881610595
+test loss: 0.4532803164853968
+7
+[0.0001]
+LR:  None
+train loss: 0.15697190265816313
+validation loss: 0.45154140909108276
+test loss: 0.4513395332651203
+8
+[0.0001]
+LR:  None
+train loss: 0.15662615215368766
+validation loss: 0.4503684787054099
+test loss: 0.45028600479383923
+9
+[0.0001]
+LR:  None
+train loss: 0.15624351328530067
+validation loss: 0.44941568587500674
+test loss: 0.44936154957350255
+10
+[0.0001]
+LR:  None
+train loss: 0.15576780125545484
+validation loss: 0.4488789141161194
+test loss: 0.4487384413775329
+11
+[0.0001]
+LR:  None
+train loss: 0.155177093432205
+validation loss: 0.4479283709204814
+test loss: 0.44772219757120757
+12
+[0.0001]
+LR:  None
+train loss: 0.1548506470653008
+validation loss: 0.44669779480011473
+test loss: 0.44650237157980754
+13
+[0.0001]
+LR:  None
+train loss: 0.1543967617361857
+validation loss: 0.44576692051811323
+test loss: 0.44550489363302603
+14
+[0.0001]
+LR:  None
+train loss: 0.15457087782530057
+validation loss: 0.44492620307783026
+test loss: 0.4447028176387922
+15
+[0.0001]
+LR:  None
+train loss: 0.1540255036741183
+validation loss: 0.4448437409178174
+test loss: 0.44479584354776447
+16
+[0.0001]
+LR:  None
+train loss: 0.15334414099979615
+validation loss: 0.4432944576112467
+test loss: 0.4433309272575727
+17
+[0.0001]
+LR:  None
+train loss: 0.15290667214115805
+validation loss: 0.44207058948432065
+test loss: 0.44203918820613913
+18
+[0.0001]
+LR:  None
+train loss: 0.152824637906158
+validation loss: 0.4411834660733593
+test loss: 0.44110921865299774
+19
+[0.0001]
+LR:  None
+train loss: 0.1524280909527713
+validation loss: 0.44081160597545643
+test loss: 0.4406792236438284
+20
+[0.0001]
+LR:  None
+train loss: 0.1517504912915289
+validation loss: 0.4394443372903473
+test loss: 0.4393757724266261
+21
+[0.0001]
+LR:  None
+train loss: 0.15157811376420147
+validation loss: 0.43931035724730216
+test loss: 0.4392627346164313
+22
+[0.0001]
+LR:  None
+train loss: 0.15143049641453185
+validation loss: 0.4382239169149102
+test loss: 0.43813742722088045
+23
+[0.0001]
+LR:  None
+train loss: 0.15093338890982852
+validation loss: 0.43622238619933346
+test loss: 0.436063581571792
+24
+[0.0001]
+LR:  None
+train loss: 0.15068626976320615
+validation loss: 0.4360797958512634
+test loss: 0.4360491101534424
+25
+[0.0001]
+LR:  None
+train loss: 0.15020368958912814
+validation loss: 0.43494273687211216
+test loss: 0.43479519297047453
+26
+[0.0001]
+LR:  None
+train loss: 0.14993191549350798
+validation loss: 0.43349062281865425
+test loss: 0.4334524638906074
+27
+[0.0001]
+LR:  None
+train loss: 0.14962335591523462
+validation loss: 0.43356538918435705
+test loss: 0.4334495097759327
+28
+[0.0001]
+LR:  None
+train loss: 0.14908679491624915
+validation loss: 0.4324196293595044
+test loss: 0.4323405257740396
+29
+[0.0001]
+LR:  None
+train loss: 0.1488862046693606
+validation loss: 0.4315122873419809
+test loss: 0.4314379917716044
+30
+[0.0001]
+LR:  None
+train loss: 0.14847398336737003
+validation loss: 0.4309795239018616
+test loss: 0.43087759565984385
+31
+[0.0001]
+LR:  None
+train loss: 0.1481042430426271
+validation loss: 0.4298539394355898
+test loss: 0.42981200329728675
+32
+[0.0001]
+LR:  None
+train loss: 0.148584715942885
+validation loss: 0.4284411811998386
+test loss: 0.4283254959078506
+33
+[0.0001]
+LR:  None
+train loss: 0.14757783422728346
+validation loss: 0.4285500749032446
+test loss: 0.42843525923840886
+34
+[0.0001]
+LR:  None
+train loss: 0.1471482856529333
+validation loss: 0.4274032652114865
+test loss: 0.4273696490360632
+35
+[0.0001]
+LR:  None
+train loss: 0.14709855371329753
+validation loss: 0.427203712960426
+test loss: 0.427180241586814
+36
+[0.0001]
+LR:  None
+train loss: 0.14650302311758187
+validation loss: 0.4263566794795744
+test loss: 0.42638082338172734
+37
+[0.0001]
+LR:  None
+train loss: 0.146173614625732
+validation loss: 0.42528121839718314
+test loss: 0.4253619145373173
+38
+[0.0001]
+LR:  None
+train loss: 0.14597016222800796
+validation loss: 0.42496069342820053
+test loss: 0.42501982306569236
+39
+[0.0001]
+LR:  None
+train loss: 0.14616484931074927
+validation loss: 0.42465565185520443
+test loss: 0.42458306379964705
+40
+[0.0001]
+LR:  None
+train loss: 0.14557458517060062
+validation loss: 0.4229909155983009
+test loss: 0.4229658615113437
+41
+[0.0001]
+LR:  None
+train loss: 0.1453785079231177
+validation loss: 0.4232770977775255
+test loss: 0.42332061249518815
+42
+[0.0001]
+LR:  None
+train loss: 0.14520445075107832
+validation loss: 0.42198475730606216
+test loss: 0.42208059448306945
+43
+[0.0001]
+LR:  None
+train loss: 0.14452716906719612
+validation loss: 0.42177351380602773
+test loss: 0.42157986196355984
+44
+[0.0001]
+LR:  None
+train loss: 0.1445195584649247
+validation loss: 0.4211358351478913
+test loss: 0.4210843583751621
+45
+[0.0001]
+LR:  None
+train loss: 0.1445484498509538
+validation loss: 0.4218200700647282
+test loss: 0.4218493977654548
+46
+[0.0001]
+LR:  None
+train loss: 0.14403092846614698
+validation loss: 0.421111919218067
+test loss: 0.4211578111494137
+47
+[0.0001]
+LR:  None
+train loss: 0.14401206433699584
+validation loss: 0.4203481057363942
+test loss: 0.42037738498698535
+48
+[0.0001]
+LR:  None
+train loss: 0.14413650792069543
+validation loss: 0.4200405302421724
+test loss: 0.41994831214250167
+49
+[0.0001]
+LR:  None
+train loss: 0.14350083228410934
+validation loss: 0.419581878620211
+test loss: 0.41970576260693176
+50
+[0.0001]
+LR:  None
+train loss: 0.14335341686835504
+validation loss: 0.41866596460178557
+test loss: 0.4185770149857343
+51
+[0.0001]
+LR:  None
+train loss: 0.14294725608006112
+validation loss: 0.41824797322757323
+test loss: 0.41822420071619343
+52
+[0.0001]
+LR:  None
+train loss: 0.1428951465226019
+validation loss: 0.4175560850636086
+test loss: 0.41761099933212553
+53
+[0.0001]
+LR:  None
+train loss: 0.14288592345892104
+validation loss: 0.4174919978510151
+test loss: 0.4176180781742616
+54
+[0.0001]
+LR:  None
+train loss: 0.1423072257095668
+validation loss: 0.4170156855881722
+test loss: 0.41716082541370997
+55
+[0.0001]
+LR:  None
+train loss: 0.14213090863512629
+validation loss: 0.4166619835165611
+test loss: 0.41666212913561507
+56
+[0.0001]
+LR:  None
+train loss: 0.14182538921549517
+validation loss: 0.4166244544590591
+test loss: 0.4167363720581965
+57
+[0.0001]
+LR:  None
+train loss: 0.14170829952492295
+validation loss: 0.41594460652463555
+test loss: 0.4161044099700169
+58
+[0.0001]
+LR:  None
+train loss: 0.14142358916134448
+validation loss: 0.4153762374430083
+test loss: 0.41541681206569575
+59
+[0.0001]
+LR:  None
+train loss: 0.14149472898517287
+validation loss: 0.4156300000674893
+test loss: 0.4157222748862864
+60
+[0.0001]
+LR:  None
+train loss: 0.14120599258081773
+validation loss: 0.4148117588991089
+test loss: 0.41493267461282063
+61
+[0.0001]
+LR:  None
+train loss: 0.14100610955415202
+validation loss: 0.41497746330591573
+test loss: 0.41501490894059656
+62
+[0.0001]
+LR:  None
+train loss: 0.14055129845176217
+validation loss: 0.4138585091268694
+test loss: 0.41401836319119933
+63
+[0.0001]
+LR:  None
+train loss: 0.14045617003849376
+validation loss: 0.41380611929593086
+test loss: 0.4138913167621571
+64
+[0.0001]
+LR:  None
+train loss: 0.14048869897220823
+validation loss: 0.4137832857843008
+test loss: 0.41390482436393383
+65
+[0.0001]
+LR:  None
+train loss: 0.14005353251364336
+validation loss: 0.4127357726983684
+test loss: 0.41280318699693014
+66
+[0.0001]
+LR:  None
+train loss: 0.14032957967024687
+validation loss: 0.412408695976703
+test loss: 0.412501847609153
+67
+[0.0001]
+LR:  None
+train loss: 0.14007164457654095
+validation loss: 0.4130527885133536
+test loss: 0.4131845608598924
+68
+[0.0001]
+LR:  None
+train loss: 0.14003051305812483
+validation loss: 0.4129732775386803
+test loss: 0.4130539141342399
+69
+[0.0001]
+LR:  None
+train loss: 0.1394954032712898
+validation loss: 0.41240260268813667
+test loss: 0.4126245624712342
+70
+[0.0001]
+LR:  None
+train loss: 0.13927908226438498
+validation loss: 0.41158780752520413
+test loss: 0.4116662367468065
+71
+[0.0001]
+LR:  None
+train loss: 0.1391717622991079
+validation loss: 0.41153040711782507
+test loss: 0.4115854120677032
+72
+[0.0001]
+LR:  None
+train loss: 0.13920649023944515
+validation loss: 0.4115826657995241
+test loss: 0.41174710291742167
+73
+[0.0001]
+LR:  None
+train loss: 0.1388494977810142
+validation loss: 0.4110567693823274
+test loss: 0.4110487863788666
+74
+[0.0001]
+LR:  None
+train loss: 0.13907424335871663
+validation loss: 0.410092602538196
+test loss: 0.4103749792884882
+75
+[0.0001]
+LR:  None
+train loss: 0.13878077794419952
+validation loss: 0.41051917984639164
+test loss: 0.41082541810384665
+76
+[0.0001]
+LR:  None
+train loss: 0.1382676340658937
+validation loss: 0.4099220440991962
+test loss: 0.4098846334293922
+77
+[0.0001]
+LR:  None
+train loss: 0.13814053473208218
+validation loss: 0.4096539468459572
+test loss: 0.40977227381801234
+78
+[0.0001]
+LR:  None
+train loss: 0.13779296741228308
+validation loss: 0.4093531736447913
+test loss: 0.4094620257315252
+79
+[0.0001]
+LR:  None
+train loss: 0.1379085759135594
+validation loss: 0.40917219901428153
+test loss: 0.40924460648290356
+80
+[0.0001]
+LR:  None
+train loss: 0.13798141466808922
+validation loss: 0.4087380818457472
+test loss: 0.4089063436373359
+81
+[0.0001]
+LR:  None
+train loss: 0.13746040391208955
+validation loss: 0.4087957987210599
+test loss: 0.40886201846870013
+82
+[0.0001]
+LR:  None
+train loss: 0.13727304185338307
+validation loss: 0.40842114561137566
+test loss: 0.40851139116310087
+83
+[0.0001]
+LR:  None
+train loss: 0.13724757123650455
+validation loss: 0.40850424246177375
+test loss: 0.40861320381333155
+84
+[0.0001]
+LR:  None
+train loss: 0.13692339117477165
+validation loss: 0.4074417878356961
+test loss: 0.4075226814302543
+85
+[0.0001]
+LR:  None
+train loss: 0.13650639502679332
+validation loss: 0.4074195834133042
+test loss: 0.40761602118376083
+86
+[0.0001]
+LR:  None
+train loss: 0.1365514263587225
+validation loss: 0.40724350334847337
+test loss: 0.4074335262876329
+87
+[0.0001]
+LR:  None
+train loss: 0.13645212169417512
+validation loss: 0.40736407614872644
+test loss: 0.40758330734401255
+88
+[0.0001]
+LR:  None
+train loss: 0.13629589627103736
+validation loss: 0.40654290391951114
+test loss: 0.4066854450371273
+89
+[0.0001]
+LR:  None
+train loss: 0.13595604949416423
+validation loss: 0.40625895061661277
+test loss: 0.4065587564640437
+90
+[0.0001]
+LR:  None
+train loss: 0.1360996078893095
+validation loss: 0.4062546247892178
+test loss: 0.40650913642243364
+91
+[0.0001]
+LR:  None
+train loss: 0.1357093027898303
+validation loss: 0.4052458973055346
+test loss: 0.40543841258715113
+92
+[0.0001]
+LR:  None
+train loss: 0.13559374938877708
+validation loss: 0.405886330234307
+test loss: 0.40621543011962713
+93
+[0.0001]
+LR:  None
+train loss: 0.1351910262207206
+validation loss: 0.40491017487059394
+test loss: 0.4049865651938429
+94
+[0.0001]
+LR:  None
+train loss: 0.1349011051453357
+validation loss: 0.4051211707200282
+test loss: 0.40539672413704114
+95
+[0.0001]
+LR:  None
+train loss: 0.13511414444472483
+validation loss: 0.4051932620985438
+test loss: 0.4054239720297849
+96
+[0.0001]
+LR:  None
+train loss: 0.13454366240617596
+validation loss: 0.40340834554974975
+test loss: 0.40349486816854047
+97
+[0.0001]
+LR:  None
+train loss: 0.1348738339977622
+validation loss: 0.40407470841143367
+test loss: 0.40436293770419285
+98
+[0.0001]
+LR:  None
+train loss: 0.13482210745323506
+validation loss: 0.4042950640037164
+test loss: 0.40446625091952787
+99
+[0.0001]
+LR:  None
+train loss: 0.1339122345636882
+validation loss: 0.4030209626503596
+test loss: 0.40324404556043136
+100
+[0.0001]
+LR:  None
+train loss: 0.13368866647132024
+validation loss: 0.4023840507710795
+test loss: 0.40269184729219465
+101
+[0.0001]
+LR:  None
+train loss: 0.13351447549508594
+validation loss: 0.4024171833617911
+test loss: 0.4025810694523733
+102
+[0.0001]
+LR:  None
+train loss: 0.13345942639211072
+validation loss: 0.4025165413759637
+test loss: 0.40270409042066435
+103
+[0.0001]
+LR:  None
+train loss: 0.13311284265507953
+validation loss: 0.40155106959981374
+test loss: 0.4017169955462237
+104
+[0.0001]
+LR:  None
+train loss: 0.1329272516679592
+validation loss: 0.4013954435702242
+test loss: 0.4015547115814523
+105
+[0.0001]
+LR:  None
+train loss: 0.13315258600148022
+validation loss: 0.40170834065603345
+test loss: 0.4021723816803587
+106
+[0.0001]
+LR:  None
+train loss: 0.1327442879394059
+validation loss: 0.4007363331343584
+test loss: 0.40087939481373674
+107
+[0.0001]
+LR:  None
+train loss: 0.132628528910742
+validation loss: 0.4003660795491559
+test loss: 0.40052764908092536
+108
+[0.0001]
+LR:  None
+train loss: 0.1324522870520152
+validation loss: 0.40037098050997283
+test loss: 0.40076752742947247
+109
+[0.0001]
+LR:  None
+train loss: 0.13222383066394164
+validation loss: 0.39965691438217704
+test loss: 0.39989407082872913
+110
+[0.0001]
+LR:  None
+train loss: 0.13179973477608362
+validation loss: 0.3998027611464539
+test loss: 0.4000657097666262
+111
+[0.0001]
+LR:  None
+train loss: 0.13168626187000884
+validation loss: 0.3994637195269997
+test loss: 0.3998387944717604
+112
+[0.0001]
+LR:  None
+train loss: 0.13134797151058342
+validation loss: 0.39947026522415224
+test loss: 0.399719450414118
+113
+[0.0001]
+LR:  None
+train loss: 0.13108910492237605
+validation loss: 0.39883080602918064
+test loss: 0.3991995884037843
+114
+[0.0001]
+LR:  None
+train loss: 0.1314817097591488
+validation loss: 0.3989660534798259
+test loss: 0.39932501424794536
+115
+[0.0001]
+LR:  None
+train loss: 0.13113577634181528
+validation loss: 0.39828294599265646
+test loss: 0.39846867184613216
+116
+[0.0001]
+LR:  None
+train loss: 0.13104156819627397
+validation loss: 0.398458552757335
+test loss: 0.3986906218868423
+117
+[0.0001]
+LR:  None
+train loss: 0.13057683764918865
+validation loss: 0.3982643230789459
+test loss: 0.3986380007047943
+118
+[0.0001]
+LR:  None
+train loss: 0.1305721156640147
+validation loss: 0.3990557493405322
+test loss: 0.39944915571465
+119
+[0.0001]
+LR:  None
+train loss: 0.13048237939391075
+validation loss: 0.3982949738980295
+test loss: 0.398556874530538
+120
+[0.0001]
+LR:  None
+train loss: 0.1300890770550052
+validation loss: 0.39785343827564373
+test loss: 0.3981417310392567
+121
+[0.0001]
+LR:  None
+train loss: 0.13039233812195636
+validation loss: 0.39805354505477936
+test loss: 0.3983877165450629
+122
+[0.0001]
+LR:  None
+train loss: 0.12974437219000917
+validation loss: 0.39764408825761527
+test loss: 0.3980430314453487
+123
+[0.0001]
+LR:  None
+train loss: 0.12984778280434986
+validation loss: 0.39742339942152605
+test loss: 0.3976815929728346
+124
+[0.0001]
+LR:  None
+train loss: 0.129813056384317
+validation loss: 0.397367170293193
+test loss: 0.3977433809998567
+125
+[0.0001]
+LR:  None
+train loss: 0.12972367772406018
+validation loss: 0.3979592926806146
+test loss: 0.3982897376716114
+126
+[0.0001]
+LR:  None
+train loss: 0.1293877229899918
+validation loss: 0.3975099187006549
+test loss: 0.3978787954082818
+127
+[0.0001]
+LR:  None
+train loss: 0.12943796148619816
+validation loss: 0.3969458323014231
+test loss: 0.39733114128097696
+128
+[0.0001]
+LR:  None
+train loss: 0.12890637067559305
+validation loss: 0.3969445460990593
+test loss: 0.3972962574087764
+129
+[0.0001]
+LR:  None
+train loss: 0.1294805237398686
+validation loss: 0.39744031904756716
+test loss: 0.39774142130556533
+130
+[0.0001]
+LR:  None
+train loss: 0.12874093000089712
+validation loss: 0.3967198348862856
+test loss: 0.39712648306437326
+131
+[0.0001]
+LR:  None
+train loss: 0.12921085940971988
+validation loss: 0.39726943273210497
+test loss: 0.3976143014696455
+132
+[0.0001]
+LR:  None
+train loss: 0.1284468760738712
+validation loss: 0.39664397347815655
+test loss: 0.3969423802078273
+133
+[0.0001]
+LR:  None
+train loss: 0.12845718665369263
+validation loss: 0.3962931728086252
+test loss: 0.39666507825336395
+134
+[0.0001]
+LR:  None
+train loss: 0.12795798735848726
+validation loss: 0.3963781308913594
+test loss: 0.3968540737923772
+135
+[0.0001]
+LR:  None
+train loss: 0.1281182740351765
+validation loss: 0.3971401833848629
+test loss: 0.39764622188267534
+136
+[0.0001]
+LR:  None
+train loss: 0.12809149552985818
+validation loss: 0.3962349745886716
+test loss: 0.3966358501400156
+137
+[0.0001]
+LR:  None
+train loss: 0.12784033782870607
+validation loss: 0.396093748524657
+test loss: 0.39650723058840287
+138
+[0.0001]
+LR:  None
+train loss: 0.1278017388091554
+validation loss: 0.3962765990919171
+test loss: 0.3967667832008862
+139
+[0.0001]
+LR:  None
+train loss: 0.1276965047573848
+validation loss: 0.3965207595451265
+test loss: 0.39689764976576286
+140
+[0.0001]
+LR:  None
+train loss: 0.12749515005725015
+validation loss: 0.39583454255725387
+test loss: 0.3962439916985965
+141
+[0.0001]
+LR:  None
+train loss: 0.1272907606871376
+validation loss: 0.3961542994586482
+test loss: 0.3966059293225508
+142
+[0.0001]
+LR:  None
+train loss: 0.12719651320242
+validation loss: 0.39581099314355156
+test loss: 0.39626563483991134
+143
+[0.0001]
+LR:  None
+train loss: 0.12726569307692648
+validation loss: 0.39590785309254684
+test loss: 0.39648755279706616
+144
+[0.0001]
+LR:  None
+train loss: 0.1269511026640946
+validation loss: 0.3959164452320476
+test loss: 0.3963129835435002
+145
+[0.0001]
+LR:  None
+train loss: 0.12688484706382194
+validation loss: 0.39591736518476417
+test loss: 0.3963540755699261
+146
+[0.0001]
+LR:  None
+train loss: 0.12669266861844894
+validation loss: 0.39591147647782876
+test loss: 0.39630560376304796
+147
+[0.0001]
+LR:  None
+train loss: 0.12648939666182302
+validation loss: 0.3956875158438225
+test loss: 0.396152475116531
+148
+[0.0001]
+LR:  None
+train loss: 0.1263248731089314
+validation loss: 0.39555877216223234
+test loss: 0.39593935685601284
+149
+[0.0001]
+LR:  None
+train loss: 0.12632722853049108
+validation loss: 0.3958476661656888
+test loss: 0.3964698393414221
+150
+[0.0001]
+LR:  None
+train loss: 0.12642695316856925
+validation loss: 0.3954287918426667
+test loss: 0.39579688611656483
+151
+[0.0001]
+LR:  None
+train loss: 0.12612844184595756
+validation loss: 0.39586727436530456
+test loss: 0.39625251521937743
+152
+[0.0001]
+LR:  None
+train loss: 0.12592087294196133
+validation loss: 0.39559498865627607
+test loss: 0.39600995246475873
+153
+[0.0001]
+LR:  None
+train loss: 0.125879206190715
+validation loss: 0.39542242166275576
+test loss: 0.39575160581282387
+154
+[0.0001]
+LR:  None
+train loss: 0.12577402817128489
+validation loss: 0.3957335607900941
+test loss: 0.39630120160506077
+155
+[0.0001]
+LR:  None
+train loss: 0.12563014181659032
+validation loss: 0.3954336508083208
+test loss: 0.3960480103306985
+156
+[0.0001]
+LR:  None
+train loss: 0.1257507825479367
+validation loss: 0.39538823903601483
+test loss: 0.3958722524023508
+157
+[0.0001]
+LR:  None
+train loss: 0.12561569301206454
+validation loss: 0.3957048243453188
+test loss: 0.39611221888546067
+158
+[0.0001]
+LR:  None
+train loss: 0.12583856249004785
+validation loss: 0.3954168904776144
+test loss: 0.3959016183371869
+159
+[0.0001]
+LR:  None
+train loss: 0.1253577988889105
+validation loss: 0.39578952399303724
+test loss: 0.3962467992134327
+160
+[0.0001]
+LR:  None
+train loss: 0.12528480263310848
+validation loss: 0.3958387335644594
+test loss: 0.3963129771036496
+161
+[0.0001]
+LR:  None
+train loss: 0.1253123103204319
+validation loss: 0.39559382753851924
+test loss: 0.3959689066784663
+162
+[0.0001]
+LR:  None
+train loss: 0.12514809802986268
+validation loss: 0.39539641390389
+test loss: 0.39577495660703155
+163
+[0.0001]
+LR:  None
+train loss: 0.12546102280608334
+validation loss: 0.3960965298514742
+test loss: 0.3965450031042199
+164
+[0.0001]
+LR:  None
+train loss: 0.12482636346857327
+validation loss: 0.39537629367978505
+test loss: 0.39594740552188706
+165
+[0.0001]
+LR:  None
+train loss: 0.12479131788514342
+validation loss: 0.3953739122426698
+test loss: 0.39591749379086805
+166
+[0.0001]
+LR:  None
+train loss: 0.12448189189544225
+validation loss: 0.3951084032847966
+test loss: 0.3956814527447587
+167
+[0.0001]
+LR:  None
+train loss: 0.12442691195688925
+validation loss: 0.39525017617399266
+test loss: 0.3956940793864041
+168
+[0.0001]
+LR:  None
+train loss: 0.12453992468153592
+validation loss: 0.3953498359593173
+test loss: 0.3958406691614655
+169
+[0.0001]
+LR:  None
+train loss: 0.12457256561665725
+validation loss: 0.3953916698476157
+test loss: 0.39588899928536875
+170
+[0.0001]
+LR:  None
+train loss: 0.12406555037435395
+validation loss: 0.3955400393646215
+test loss: 0.3959818744976308
+171
+[0.0001]
+LR:  None
+train loss: 0.12432538261543988
+validation loss: 0.39553238391575835
+test loss: 0.39596425419508996
+172
+[0.0001]
+LR:  None
+train loss: 0.12429068091506533
+validation loss: 0.3955048001666067
+test loss: 0.3959632002784335
+173
+[0.0001]
+LR:  None
+train loss: 0.12410459417437737
+validation loss: 0.395319653037306
+test loss: 0.39583207948197696
+174
+[0.0001]
+LR:  None
+train loss: 0.12393530714890968
+validation loss: 0.39549309998547966
+test loss: 0.3960802345764997
+175
+[0.0001]
+LR:  None
+train loss: 0.12386558230045283
+validation loss: 0.3956692659505635
+test loss: 0.39615437286702365
+176
+[0.0001]
+LR:  None
+train loss: 0.12352031809930636
+validation loss: 0.39541879482683634
+test loss: 0.39596189413365374
+177
+[0.0001]
+LR:  None
+train loss: 0.12400685535306404
+validation loss: 0.39558385833354887
+test loss: 0.39612988287073764
+178
+[0.0001]
+LR:  None
+train loss: 0.12348385854603286
+validation loss: 0.3958068866375544
+test loss: 0.396320001996335
+179
+[0.0001]
+LR:  None
+train loss: 0.12357271072114022
+validation loss: 0.3956258780051064
+test loss: 0.3960766763685592
+180
+[0.0001]
+LR:  None
+train loss: 0.12336666502498111
+validation loss: 0.39568620926007664
+test loss: 0.39622210683027154
+181
+[0.0001]
+LR:  None
+train loss: 0.123223389750822
+validation loss: 0.39560175396402947
+test loss: 0.396029179488285
+182
+[0.0001]
+LR:  None
+train loss: 0.12361982136315819
+validation loss: 0.39539539003903557
+test loss: 0.3959786388554978
+183
+[0.0001]
+LR:  None
+train loss: 0.12325498015620924
+validation loss: 0.3955594588005638
+test loss: 0.3960718142257059
+184
+[0.0001]
+LR:  None
+train loss: 0.12277243095858179
+validation loss: 0.39543677347632095
+test loss: 0.3959055702002442
+185
+[0.0001]
+LR:  None
+train loss: 0.12291225726848479
+validation loss: 0.3959706047680546
+test loss: 0.39647310528421364
+186
+[0.0001]
+LR:  None
+train loss: 0.12265825935177763
+validation loss: 0.39570458494453975
+test loss: 0.396218493680519
+ES epoch: 166
+Test data
+Skills for tau_11
+R^2: 0.9826
+Correlation: 0.9921
+
+Skills for tau_12
+R^2: 0.9389
+Correlation: 0.9694
+
+Skills for tau_13
+R^2: 0.8614
+Correlation: 0.9285
+
+Skills for tau_22
+R^2: 0.8862
+Correlation: 0.9442
+
+Skills for tau_23
+R^2: 0.8103
+Correlation: 0.9005
+
+Skills for tau_33
+R^2: 0.7654
+Correlation: 0.8844
+
+Validation data
+Skills for tau_11
+R^2: 0.9824
+Correlation: 0.9921
+
+Skills for tau_12
+R^2: 0.9387
+Correlation: 0.9693
+
+Skills for tau_13
+R^2: 0.8621
+Correlation: 0.9288
+
+Skills for tau_22
+R^2: 0.8892
+Correlation: 0.9460
+
+Skills for tau_23
+R^2: 0.8117
+Correlation: 0.9012
+
+Skills for tau_33
+R^2: 0.7645
+Correlation: 0.8840
+
+Train data
+Skills for tau_11
+R^2: 0.9952
+Correlation: 0.9976
+
+Skills for tau_12
+R^2: 0.9818
+Correlation: 0.9909
+
+Skills for tau_13
+R^2: 0.7629
+Correlation: 0.8810
+
+Skills for tau_22
+R^2: 0.9131
+Correlation: 0.9581
+
+Skills for tau_23
+R^2: 0.8245
+Correlation: 0.9092
+
+Skills for tau_33
+R^2: 0.3331
+Correlation: 0.6448
+
+[[0.9923 0.9704 0.9287 0.9485 0.9014 0.8846]
+ [0.9927 0.9703 0.9288 0.9467 0.9021 0.8814]
+ [0.9921 0.9694 0.9285 0.9442 0.9005 0.8844]]
+[[0.9828 0.9409 0.8613 0.8932 0.812  0.768 ]
+ [0.9843 0.9413 0.8617 0.8899 0.813  0.7607]
+ [0.9826 0.9389 0.8614 0.8862 0.8103 0.7654]]
+tau_11 avg. R^2 is 0.9832511796190304 +/- 0.0007703233181589864
+tau_12 avg. R^2 is 0.9403746700149928 +/- 0.0010279913124128452
+tau_13 avg. R^2 is 0.8614752790247127 +/- 0.00017303965559290732
+tau_22 avg. R^2 is 0.8897752071536636 +/- 0.0028432955912773236
+tau_23 avg. R^2 is 0.8117720451585188 +/- 0.0010879031674116961
+tau_33 avg. R^2 is 0.7646789555954315 +/- 0.0030285074128973684
+Overall avg. R^2 is 0.8752212227610583 +/- 0.0009001972755709076
