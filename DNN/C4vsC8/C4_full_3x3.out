@@ -1,0 +1,1578 @@
+Restoring modules from user's e2cnn
+/burg/glab/users/ac5006/miniconda/envs/e2cnn/lib/python3.10/site-packages/e2cnn/nn/modules/r2_conv/basisexpansion_singleblock.py:80: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead. (Triggered internally at  /home/conda/feedstock_root/build_artifacts/pytorch-recipe_1660087551192/work/aten/src/ATen/native/IndexingUtils.h:27.)
+  full_mask[mask] = norms.to(torch.uint8)
+/burg/glab/users/ac5006/miniconda/envs/e2cnn/lib/python3.10/site-packages/e2cnn/nn/modules/r2_conv/basisexpansion_singleblock.py:80: UserWarning: masked_fill_ received a mask with dtype torch.uint8, this behavior is now deprecated,please use a mask with dtype torch.bool instead. (Triggered internally at  /home/conda/feedstock_root/build_artifacts/pytorch-recipe_1660087551192/work/aten/src/ATen/native/TensorAdvancedIndexing.cpp:1581.)
+  full_mask[mask] = norms.to(torch.uint8)
+/burg/glab/users/ac5006/DNStoLES/CN_paperRuns/e2cnn-C4full_3x3.py:147: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  fig1 = plt.figure(figsize = (20, 6))
+cuda
+C4_full_3x3_4x1026Re900_4x3078Re2700_
+Train Files:
+<xarray.Dataset>
+Dimensions:  (z: 64, y: 32, x: 32, time: 44)
+Coordinates:
+  * z        (z) float64 0.5648 0.8473 1.13 1.412 ... 17.51 17.79 18.07 18.36
+  * y        (y) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * x        (x) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * time     (time) int64 590200 590400 590600 590800 ... 608000 609000 610000
+Data variables: (12/14)
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    ...       ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    ub       (z, y, x, time) float64 ...
+    vb       (z, y, x, time) float64 ...
+    wb       (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+<xarray.Dataset>
+Dimensions:  (z: 64, y: 32, x: 32, time: 3)
+Coordinates:
+  * z        (z) float64 0.5648 0.8473 1.13 1.412 ... 17.51 17.79 18.07 18.36
+  * y        (y) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * x        (x) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * time     (time) int64 1368000 1377000 1386000
+Data variables:
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    tau12    (z, y, x, time) float64 ...
+    tau13    (z, y, x, time) float64 ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+output shape is (348846, 6)
+input shape should be (348846, 4, 3, 3, 3)
+input shape to do 3rd dimension as channel in R2Conv is (348846, 12, 3, 3)
+Test Files:
+<xarray.Dataset>
+Dimensions:  (z: 64, y: 32, x: 32, time: 15)
+Coordinates:
+  * z        (z) float64 0.5648 0.8473 1.13 1.412 ... 17.51 17.79 18.07 18.36
+  * y        (y) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * x        (x) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * time     (time) int64 616000 617000 618000 619000 ... 628000 629000 630000
+Data variables: (12/14)
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    ...       ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    ub       (z, y, x, time) float64 ...
+    vb       (z, y, x, time) float64 ...
+    wb       (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+output shape is (282614, 6)
+input shape should be (282614, 4, 3, 3, 3)
+input shape to do 3rd dimension as channel in R2Conv is (282614, 12, 3, 3)
+Lossweights:
+[ 203485.90666152  881165.58631476 3371004.48314436  428588.56000568
+ 5051510.50622855 2777974.74486919]
+0
+[0.01]
+LR:  None
+train loss: 0.22764018653749513
+validation loss: 0.12463641073678973
+test loss: 0.12526835632509695
+1
+[0.001]
+LR:  None
+train loss: 0.21100409383719695
+validation loss: 0.11865721272425095
+test loss: 0.11917818612712029
+2
+[0.0001]
+LR:  None
+train loss: 0.20923041284514282
+validation loss: 0.11882599997231225
+test loss: 0.11945968401151817
+3
+[0.0001]
+LR:  None
+train loss: 0.2086564115671109
+validation loss: 0.11865173642185219
+test loss: 0.1192733034350785
+4
+[0.0001]
+LR:  None
+train loss: 0.2080539006693304
+validation loss: 0.11861348313461571
+test loss: 0.11926025727243374
+5
+[0.0001]
+LR:  None
+train loss: 0.2076439195932318
+validation loss: 0.118547541587582
+test loss: 0.11900626445625027
+6
+[0.0001]
+LR:  None
+train loss: 0.20697313500066303
+validation loss: 0.11882828542790067
+test loss: 0.1194661970422073
+7
+[0.0001]
+LR:  None
+train loss: 0.20646876194991062
+validation loss: 0.11929381712804758
+test loss: 0.11990849576869644
+8
+[0.0001]
+LR:  None
+train loss: 0.20585979769761334
+validation loss: 0.11897036046516703
+test loss: 0.11950947764453983
+9
+[0.0001]
+LR:  None
+train loss: 0.20539572630192846
+validation loss: 0.1190247447088496
+test loss: 0.11963889839617697
+10
+[0.0001]
+LR:  None
+train loss: 0.2047796348808725
+validation loss: 0.1191339517333524
+test loss: 0.1197056746980621
+11
+[0.0001]
+LR:  None
+train loss: 0.2042615064989865
+validation loss: 0.11867239006977547
+test loss: 0.1191941684889465
+12
+[0.0001]
+LR:  None
+train loss: 0.20380612525118383
+validation loss: 0.11882002169839972
+test loss: 0.11955800752338662
+13
+[0.0001]
+LR:  None
+train loss: 0.20317220707524192
+validation loss: 0.11876026684007318
+test loss: 0.11924445104752719
+14
+[0.0001]
+LR:  None
+train loss: 0.20262434064725415
+validation loss: 0.11900695093238653
+test loss: 0.11953747104110177
+15
+[0.0001]
+LR:  None
+train loss: 0.2021761965851654
+validation loss: 0.1193957646985172
+test loss: 0.12005554160231803
+16
+[0.0001]
+LR:  None
+train loss: 0.20165578415291036
+validation loss: 0.11905879815365247
+test loss: 0.11966316009203166
+17
+[0.0001]
+LR:  None
+train loss: 0.201102817585445
+validation loss: 0.11902445490744962
+test loss: 0.11955723659655206
+18
+[0.0001]
+LR:  None
+train loss: 0.20058031653419253
+validation loss: 0.11930592606499879
+test loss: 0.11986834188119103
+19
+[0.0001]
+LR:  None
+train loss: 0.2001482722132316
+validation loss: 0.11936227107080992
+test loss: 0.11998709914300515
+20
+[0.0001]
+LR:  None
+train loss: 0.19950033048107935
+validation loss: 0.11936979181442121
+test loss: 0.11992983330394258
+21
+[0.0001]
+LR:  None
+train loss: 0.1989615325081652
+validation loss: 0.11916021055204032
+test loss: 0.11973848522238346
+22
+[0.0001]
+LR:  None
+train loss: 0.19850668462386192
+validation loss: 0.120035912521859
+test loss: 0.12067335100422383
+23
+[0.0001]
+LR:  None
+train loss: 0.19789271031948694
+validation loss: 0.11987257410802318
+test loss: 0.12055048072149763
+24
+[0.0001]
+LR:  None
+train loss: 0.1973996916330637
+validation loss: 0.11941869649804222
+test loss: 0.12006619908328493
+25
+[0.0001]
+LR:  None
+train loss: 0.1968356012047648
+validation loss: 0.11999094985503447
+test loss: 0.12052794872676766
+ES epoch: 5
+Test data
+Skills for tau_11
+R^2: 0.9682
+Correlation: 0.9840
+
+Skills for tau_12
+R^2: 0.7826
+Correlation: 0.8850
+
+Skills for tau_13
+R^2: 0.7677
+Correlation: 0.8768
+
+Skills for tau_22
+R^2: 0.8005
+Correlation: 0.8959
+
+Skills for tau_23
+R^2: 0.6848
+Correlation: 0.8286
+
+Skills for tau_33
+R^2: 0.5174
+Correlation: 0.8120
+
+Validation data
+Skills for tau_11
+R^2: 0.9692
+Correlation: 0.9845
+
+Skills for tau_12
+R^2: 0.7829
+Correlation: 0.8852
+
+Skills for tau_13
+R^2: 0.7666
+Correlation: 0.8762
+
+Skills for tau_22
+R^2: 0.7958
+Correlation: 0.8937
+
+Skills for tau_23
+R^2: 0.6853
+Correlation: 0.8291
+
+Skills for tau_33
+R^2: 0.5196
+Correlation: 0.8147
+
+Train data
+Skills for tau_11
+R^2: 0.9536
+Correlation: 0.9767
+
+Skills for tau_12
+R^2: 0.7824
+Correlation: 0.8853
+
+Skills for tau_13
+R^2: 0.7504
+Correlation: 0.8664
+
+Skills for tau_22
+R^2: 0.8739
+Correlation: 0.9363
+
+Skills for tau_23
+R^2: 0.7283
+Correlation: 0.8534
+
+Skills for tau_33
+R^2: 0.5329
+Correlation: 0.7485
+
+Train Files:
+<xarray.Dataset>
+Dimensions:  (z: 64, y: 32, x: 32, time: 44)
+Coordinates:
+  * z        (z) float64 0.5648 0.8473 1.13 1.412 ... 17.51 17.79 18.07 18.36
+  * y        (y) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * x        (x) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * time     (time) int64 590200 590400 590600 590800 ... 608000 609000 610000
+Data variables: (12/14)
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    ...       ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    ub       (z, y, x, time) float64 ...
+    vb       (z, y, x, time) float64 ...
+    wb       (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+<xarray.Dataset>
+Dimensions:  (z: 64, y: 32, x: 32, time: 3)
+Coordinates:
+  * z        (z) float64 0.5648 0.8473 1.13 1.412 ... 17.51 17.79 18.07 18.36
+  * y        (y) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * x        (x) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * time     (time) int64 1368000 1377000 1386000
+Data variables:
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    tau12    (z, y, x, time) float64 ...
+    tau13    (z, y, x, time) float64 ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+output shape is (349061, 6)
+input shape should be (349061, 4, 3, 3, 3)
+input shape to do 3rd dimension as channel in R2Conv is (349061, 12, 3, 3)
+Test Files:
+<xarray.Dataset>
+Dimensions:  (z: 64, y: 32, x: 32, time: 15)
+Coordinates:
+  * z        (z) float64 0.5648 0.8473 1.13 1.412 ... 17.51 17.79 18.07 18.36
+  * y        (y) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * x        (x) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * time     (time) int64 616000 617000 618000 619000 ... 628000 629000 630000
+Data variables: (12/14)
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    ...       ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    ub       (z, y, x, time) float64 ...
+    vb       (z, y, x, time) float64 ...
+    wb       (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+output shape is (283354, 6)
+input shape should be (283354, 4, 3, 3, 3)
+input shape to do 3rd dimension as channel in R2Conv is (283354, 12, 3, 3)
+Lossweights:
+[ 203506.3165  881417.026  3370058.9839  428662.4927 5053538.8707 2785310.1748]
+0
+[0.01]
+LR:  None
+train loss: 0.23145885926097426
+validation loss: 0.1342853805581666
+test loss: 0.13362612537839585
+1
+[0.001]
+LR:  None
+train loss: 0.21173744860448337
+validation loss: 0.12046367440214878
+test loss: 0.11990093937066443
+2
+[0.0001]
+LR:  None
+train loss: 0.21005010057121373
+validation loss: 0.11965985789026476
+test loss: 0.11913956422267923
+3
+[0.0001]
+LR:  None
+train loss: 0.2094894964158765
+validation loss: 0.1197876985586896
+test loss: 0.11924499223686257
+4
+[0.0001]
+LR:  None
+train loss: 0.20891951203091294
+validation loss: 0.11971556976857906
+test loss: 0.11917868728859857
+5
+[0.0001]
+LR:  None
+train loss: 0.20835022953490864
+validation loss: 0.11988257933874846
+test loss: 0.11935060455169696
+6
+[0.0001]
+LR:  None
+train loss: 0.20781896806738423
+validation loss: 0.11963905621204379
+test loss: 0.11912105459550015
+7
+[0.0001]
+LR:  None
+train loss: 0.20729103560583806
+validation loss: 0.11999026750253618
+test loss: 0.11944451507644976
+8
+[0.0001]
+LR:  None
+train loss: 0.20665471314997483
+validation loss: 0.11977281169660635
+test loss: 0.1192527051418326
+9
+[0.0001]
+LR:  None
+train loss: 0.20613118450276405
+validation loss: 0.11995287835840017
+test loss: 0.11943873936891825
+10
+[0.0001]
+LR:  None
+train loss: 0.2056089236602394
+validation loss: 0.12002798820723522
+test loss: 0.11951402660374644
+11
+[0.0001]
+LR:  None
+train loss: 0.20508838457401932
+validation loss: 0.12038491678481743
+test loss: 0.1198535796255298
+12
+[0.0001]
+LR:  None
+train loss: 0.20451555949722425
+validation loss: 0.11955317809062958
+test loss: 0.11909075062082727
+13
+[0.0001]
+LR:  None
+train loss: 0.20382646527250187
+validation loss: 0.1196270573594325
+test loss: 0.11912600886736935
+14
+[0.0001]
+LR:  None
+train loss: 0.20347643309209326
+validation loss: 0.12008158414767364
+test loss: 0.11958419464840385
+15
+[0.0001]
+LR:  None
+train loss: 0.20271480488802107
+validation loss: 0.11990885574578582
+test loss: 0.1194249684073193
+16
+[0.0001]
+LR:  None
+train loss: 0.20217713687748473
+validation loss: 0.12004521759646769
+test loss: 0.11956840461097702
+17
+[0.0001]
+LR:  None
+train loss: 0.20167176565365466
+validation loss: 0.12005243150346695
+test loss: 0.11957012236962034
+18
+[0.0001]
+LR:  None
+train loss: 0.20103270282099098
+validation loss: 0.12050177405526549
+test loss: 0.11999358776451748
+19
+[0.0001]
+LR:  None
+train loss: 0.20037141915836063
+validation loss: 0.12000983860712047
+test loss: 0.11954216218573299
+20
+[0.0001]
+LR:  None
+train loss: 0.19979555053221518
+validation loss: 0.11999397247454148
+test loss: 0.11949175622629121
+21
+[0.0001]
+LR:  None
+train loss: 0.1992772101848602
+validation loss: 0.12061798122075075
+test loss: 0.1201226462636078
+22
+[0.0001]
+LR:  None
+train loss: 0.19870144245842722
+validation loss: 0.12029239830206032
+test loss: 0.11981576260551259
+23
+[0.0001]
+LR:  None
+train loss: 0.19808144413113957
+validation loss: 0.12105063468887145
+test loss: 0.12056100238389193
+24
+[0.0001]
+LR:  None
+train loss: 0.19749737706226903
+validation loss: 0.12062444207128645
+test loss: 0.12011439136242162
+25
+[0.0001]
+LR:  None
+train loss: 0.1969401654585895
+validation loss: 0.12089807222179438
+test loss: 0.12042369069061253
+26
+[0.0001]
+LR:  None
+train loss: 0.19630790298435477
+validation loss: 0.12094565743516068
+test loss: 0.12049471937083148
+27
+[0.0001]
+LR:  None
+train loss: 0.19561586950788087
+validation loss: 0.12106745027401938
+test loss: 0.12057591002243363
+28
+[0.0001]
+LR:  None
+train loss: 0.19517790335812515
+validation loss: 0.12089964560347358
+test loss: 0.12045598079605517
+29
+[0.0001]
+LR:  None
+train loss: 0.1945975273447033
+validation loss: 0.12187832035844061
+test loss: 0.12136465480843256
+30
+[0.0001]
+LR:  None
+train loss: 0.1939133520772049
+validation loss: 0.12138974695965803
+test loss: 0.12094123529641183
+31
+[0.0001]
+LR:  None
+train loss: 0.19326690809726957
+validation loss: 0.12158369156507684
+test loss: 0.12110059473237962
+32
+[0.0001]
+LR:  None
+train loss: 0.1927911644035002
+validation loss: 0.12166605524912534
+test loss: 0.12118679609747039
+ES epoch: 12
+Test data
+Skills for tau_11
+R^2: 0.9683
+Correlation: 0.9841
+
+Skills for tau_12
+R^2: 0.7868
+Correlation: 0.8872
+
+Skills for tau_13
+R^2: 0.7624
+Correlation: 0.8735
+
+Skills for tau_22
+R^2: 0.8044
+Correlation: 0.8980
+
+Skills for tau_23
+R^2: 0.6882
+Correlation: 0.8302
+
+Skills for tau_33
+R^2: 0.5049
+Correlation: 0.8118
+
+Validation data
+Skills for tau_11
+R^2: 0.9688
+Correlation: 0.9843
+
+Skills for tau_12
+R^2: 0.7859
+Correlation: 0.8867
+
+Skills for tau_13
+R^2: 0.7658
+Correlation: 0.8758
+
+Skills for tau_22
+R^2: 0.8041
+Correlation: 0.8976
+
+Skills for tau_23
+R^2: 0.6853
+Correlation: 0.8285
+
+Skills for tau_33
+R^2: 0.4907
+Correlation: 0.8110
+
+Train data
+Skills for tau_11
+R^2: 0.9565
+Correlation: 0.9782
+
+Skills for tau_12
+R^2: 0.8001
+Correlation: 0.8953
+
+Skills for tau_13
+R^2: 0.7566
+Correlation: 0.8708
+
+Skills for tau_22
+R^2: 0.8787
+Correlation: 0.9386
+
+Skills for tau_23
+R^2: 0.7620
+Correlation: 0.8737
+
+Skills for tau_33
+R^2: 0.4929
+Correlation: 0.7204
+
+Train Files:
+<xarray.Dataset>
+Dimensions:  (z: 64, y: 32, x: 32, time: 44)
+Coordinates:
+  * z        (z) float64 0.5648 0.8473 1.13 1.412 ... 17.51 17.79 18.07 18.36
+  * y        (y) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * x        (x) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * time     (time) int64 590200 590400 590600 590800 ... 608000 609000 610000
+Data variables: (12/14)
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    ...       ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    ub       (z, y, x, time) float64 ...
+    vb       (z, y, x, time) float64 ...
+    wb       (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+<xarray.Dataset>
+Dimensions:  (z: 64, y: 32, x: 32, time: 3)
+Coordinates:
+  * z        (z) float64 0.5648 0.8473 1.13 1.412 ... 17.51 17.79 18.07 18.36
+  * y        (y) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * x        (x) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * time     (time) int64 1368000 1377000 1386000
+Data variables:
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    tau12    (z, y, x, time) float64 ...
+    tau13    (z, y, x, time) float64 ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+output shape is (349259, 6)
+input shape should be (349259, 4, 3, 3, 3)
+input shape to do 3rd dimension as channel in R2Conv is (349259, 12, 3, 3)
+Test Files:
+<xarray.Dataset>
+Dimensions:  (z: 64, y: 32, x: 32, time: 15)
+Coordinates:
+  * z        (z) float64 0.5648 0.8473 1.13 1.412 ... 17.51 17.79 18.07 18.36
+  * y        (y) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * x        (x) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * time     (time) int64 616000 617000 618000 619000 ... 628000 629000 630000
+Data variables: (12/14)
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    ...       ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    ub       (z, y, x, time) float64 ...
+    vb       (z, y, x, time) float64 ...
+    wb       (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+output shape is (282566, 6)
+input shape should be (282566, 4, 3, 3, 3)
+input shape to do 3rd dimension as channel in R2Conv is (282566, 12, 3, 3)
+Lossweights:
+[ 203541.6865  881564.575  3368409.4597  428696.5783 5060172.1142 2774468.2354]
+0
+[0.01]
+LR:  None
+train loss: 0.24241445338326467
+validation loss: 0.13663518225569196
+test loss: 0.13751826458626934
+1
+[0.001]
+LR:  None
+train loss: 0.2098291240733783
+validation loss: 0.11974690634428459
+test loss: 0.11977158992140985
+2
+[0.0001]
+LR:  None
+train loss: 0.20810374440812573
+validation loss: 0.11874350012049203
+test loss: 0.11877078649821118
+3
+[0.0001]
+LR:  None
+train loss: 0.20747391802528903
+validation loss: 0.11871612781670995
+test loss: 0.11874802584837113
+4
+[0.0001]
+LR:  None
+train loss: 0.20674403855835866
+validation loss: 0.1188250218354768
+test loss: 0.11884035248139369
+5
+[0.0001]
+LR:  None
+train loss: 0.20628759326399446
+validation loss: 0.11914664173477552
+test loss: 0.11915599542723875
+6
+[0.0001]
+LR:  None
+train loss: 0.2058390298675749
+validation loss: 0.11914287799322451
+test loss: 0.11918107877312538
+7
+[0.0001]
+LR:  None
+train loss: 0.205189846843506
+validation loss: 0.11884660493823948
+test loss: 0.11881371987571598
+8
+[0.0001]
+LR:  None
+train loss: 0.2046306686263594
+validation loss: 0.11896288405960383
+test loss: 0.11905005314089162
+9
+[0.0001]
+LR:  None
+train loss: 0.2041599309140576
+validation loss: 0.11935124936040784
+test loss: 0.11935875331748555
+10
+[0.0001]
+LR:  None
+train loss: 0.20340667091242665
+validation loss: 0.11916975870959312
+test loss: 0.11918928299151627
+11
+[0.0001]
+LR:  None
+train loss: 0.202926018682543
+validation loss: 0.11880388212372667
+test loss: 0.11875251122781337
+12
+[0.0001]
+LR:  None
+train loss: 0.20224090298509154
+validation loss: 0.1189783363356817
+test loss: 0.11902319147918865
+13
+[0.0001]
+LR:  None
+train loss: 0.20182213976896604
+validation loss: 0.11916071801715525
+test loss: 0.11928716486029992
+14
+[0.0001]
+LR:  None
+train loss: 0.2012673305251607
+validation loss: 0.11951912849730324
+test loss: 0.11953304764985107
+15
+[0.0001]
+LR:  None
+train loss: 0.2009805893038972
+validation loss: 0.11916023733273415
+test loss: 0.11910236754842943
+16
+[0.0001]
+LR:  None
+train loss: 0.20018642933375405
+validation loss: 0.11917081352222698
+test loss: 0.1191372794613654
+17
+[0.0001]
+LR:  None
+train loss: 0.19957099237355969
+validation loss: 0.11969300239493545
+test loss: 0.1196830857138079
+18
+[0.0001]
+LR:  None
+train loss: 0.19900511538545054
+validation loss: 0.1196408469061716
+test loss: 0.119634805619909
+19
+[0.0001]
+LR:  None
+train loss: 0.19852445738767088
+validation loss: 0.11977846684322516
+test loss: 0.11978277291160044
+20
+[0.0001]
+LR:  None
+train loss: 0.1979172450877072
+validation loss: 0.12005571632561197
+test loss: 0.1200148217229523
+21
+[0.0001]
+LR:  None
+train loss: 0.19752477715303068
+validation loss: 0.11972500803691485
+test loss: 0.1197696772132456
+22
+[0.0001]
+LR:  None
+train loss: 0.19687543822305306
+validation loss: 0.120245484313716
+test loss: 0.12037011748032903
+23
+[0.0001]
+LR:  None
+train loss: 0.1963299704609375
+validation loss: 0.1202833413444709
+test loss: 0.12028236483651301
+ES epoch: 3
+Test data
+Skills for tau_11
+R^2: 0.9685
+Correlation: 0.9842
+
+Skills for tau_12
+R^2: 0.7866
+Correlation: 0.8874
+
+Skills for tau_13
+R^2: 0.7725
+Correlation: 0.8791
+
+Skills for tau_22
+R^2: 0.8128
+Correlation: 0.9019
+
+Skills for tau_23
+R^2: 0.6862
+Correlation: 0.8290
+
+Skills for tau_33
+R^2: 0.5092
+Correlation: 0.8165
+
+Validation data
+Skills for tau_11
+R^2: 0.9681
+Correlation: 0.9840
+
+Skills for tau_12
+R^2: 0.7837
+Correlation: 0.8857
+
+Skills for tau_13
+R^2: 0.7696
+Correlation: 0.8775
+
+Skills for tau_22
+R^2: 0.8092
+Correlation: 0.9000
+
+Skills for tau_23
+R^2: 0.6874
+Correlation: 0.8297
+
+Skills for tau_33
+R^2: 0.5006
+Correlation: 0.8163
+
+Train data
+Skills for tau_11
+R^2: 0.9583
+Correlation: 0.9792
+
+Skills for tau_12
+R^2: 0.7777
+Correlation: 0.8838
+
+Skills for tau_13
+R^2: 0.7417
+Correlation: 0.8626
+
+Skills for tau_22
+R^2: 0.8676
+Correlation: 0.9344
+
+Skills for tau_23
+R^2: 0.7477
+Correlation: 0.8649
+
+Skills for tau_33
+R^2: 0.4915
+Correlation: 0.7186
+
+Train Files:
+<xarray.Dataset>
+Dimensions:  (z: 64, y: 32, x: 32, time: 44)
+Coordinates:
+  * z        (z) float64 0.5648 0.8473 1.13 1.412 ... 17.51 17.79 18.07 18.36
+  * y        (y) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * x        (x) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * time     (time) int64 590200 590400 590600 590800 ... 608000 609000 610000
+Data variables: (12/14)
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    ...       ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    ub       (z, y, x, time) float64 ...
+    vb       (z, y, x, time) float64 ...
+    wb       (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+<xarray.Dataset>
+Dimensions:  (z: 64, y: 32, x: 32, time: 3)
+Coordinates:
+  * z        (z) float64 0.5648 0.8473 1.13 1.412 ... 17.51 17.79 18.07 18.36
+  * y        (y) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * x        (x) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * time     (time) int64 1368000 1377000 1386000
+Data variables:
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    tau12    (z, y, x, time) float64 ...
+    tau13    (z, y, x, time) float64 ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+output shape is (348856, 6)
+input shape should be (348856, 4, 3, 3, 3)
+input shape to do 3rd dimension as channel in R2Conv is (348856, 12, 3, 3)
+Test Files:
+<xarray.Dataset>
+Dimensions:  (z: 64, y: 32, x: 32, time: 15)
+Coordinates:
+  * z        (z) float64 0.5648 0.8473 1.13 1.412 ... 17.51 17.79 18.07 18.36
+  * y        (y) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * x        (x) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * time     (time) int64 616000 617000 618000 619000 ... 628000 629000 630000
+Data variables: (12/14)
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    ...       ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    ub       (z, y, x, time) float64 ...
+    vb       (z, y, x, time) float64 ...
+    wb       (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+output shape is (282282, 6)
+input shape should be (282282, 4, 3, 3, 3)
+input shape to do 3rd dimension as channel in R2Conv is (282282, 12, 3, 3)
+Lossweights:
+[ 203457.428   881075.6512 3366339.0956  428530.6566 5060892.6543 2773392.9994]
+0
+[0.01]
+LR:  None
+train loss: 0.2255619841657756
+validation loss: 0.12892505585296715
+test loss: 0.12958057638908382
+1
+[0.001]
+LR:  None
+train loss: 0.21088668355843104
+validation loss: 0.11986256988869977
+test loss: 0.12053002185634584
+2
+[0.0001]
+LR:  None
+train loss: 0.2089878225854873
+validation loss: 0.1188170284889855
+test loss: 0.11944515915210711
+3
+[0.0001]
+LR:  None
+train loss: 0.20832395417055927
+validation loss: 0.11870477628973086
+test loss: 0.11932214106036118
+4
+[0.0001]
+LR:  None
+train loss: 0.2077726447848621
+validation loss: 0.11878602743929784
+test loss: 0.1193910062124227
+5
+[0.0001]
+LR:  None
+train loss: 0.20716101905666512
+validation loss: 0.11888652976032514
+test loss: 0.11949038948501065
+6
+[0.0001]
+LR:  None
+train loss: 0.20655628853583016
+validation loss: 0.11853237630144883
+test loss: 0.11912519661087378
+7
+[0.0001]
+LR:  None
+train loss: 0.20602901974522894
+validation loss: 0.11933168025790666
+test loss: 0.11992667736173859
+8
+[0.0001]
+LR:  None
+train loss: 0.2053737004505113
+validation loss: 0.11902671992232347
+test loss: 0.11959146187038151
+9
+[0.0001]
+LR:  None
+train loss: 0.20467944246212327
+validation loss: 0.11903427749921183
+test loss: 0.1196222695736893
+10
+[0.0001]
+LR:  None
+train loss: 0.2041341782220151
+validation loss: 0.11927786273240613
+test loss: 0.11987906613622722
+11
+[0.0001]
+LR:  None
+train loss: 0.2035207079372932
+validation loss: 0.11907057554194665
+test loss: 0.11967215322939415
+12
+[0.0001]
+LR:  None
+train loss: 0.20290011131978417
+validation loss: 0.11926477394486482
+test loss: 0.11985370327257232
+13
+[0.0001]
+LR:  None
+train loss: 0.20229408424554096
+validation loss: 0.11937333955321323
+test loss: 0.11997887993053244
+14
+[0.0001]
+LR:  None
+train loss: 0.20177651372701558
+validation loss: 0.11989665722635597
+test loss: 0.12046925184785252
+15
+[0.0001]
+LR:  None
+train loss: 0.20107323663968443
+validation loss: 0.11942923192041431
+test loss: 0.12002665256189905
+16
+[0.0001]
+LR:  None
+train loss: 0.20050959864851703
+validation loss: 0.11947640763348656
+test loss: 0.12008188446781953
+17
+[0.0001]
+LR:  None
+train loss: 0.19982121514039
+validation loss: 0.11955838680595252
+test loss: 0.12016016369845721
+18
+[0.0001]
+LR:  None
+train loss: 0.19925870657873498
+validation loss: 0.11982994838147867
+test loss: 0.1204306525881746
+19
+[0.0001]
+LR:  None
+train loss: 0.19860764264145522
+validation loss: 0.12011759423595454
+test loss: 0.12072684569042179
+20
+[0.0001]
+LR:  None
+train loss: 0.19803159038850704
+validation loss: 0.11999199107021292
+test loss: 0.120581675933107
+21
+[0.0001]
+LR:  None
+train loss: 0.1975800452608473
+validation loss: 0.12083507443560573
+test loss: 0.12140608641280105
+22
+[0.0001]
+LR:  None
+train loss: 0.19682575189956492
+validation loss: 0.12065873845652175
+test loss: 0.12126549801128586
+23
+[0.0001]
+LR:  None
+train loss: 0.19620781712212199
+validation loss: 0.12044804757550828
+test loss: 0.12104083166672722
+24
+[0.0001]
+LR:  None
+train loss: 0.19549602864054505
+validation loss: 0.12097536262858434
+test loss: 0.12158330585634912
+25
+[0.0001]
+LR:  None
+train loss: 0.19485401455980528
+validation loss: 0.12083136918206536
+test loss: 0.1214153214325997
+26
+[0.0001]
+LR:  None
+train loss: 0.1944310344993632
+validation loss: 0.12141876711696903
+test loss: 0.12202043449738265
+ES epoch: 6
+Test data
+Skills for tau_11
+R^2: 0.9691
+Correlation: 0.9847
+
+Skills for tau_12
+R^2: 0.7841
+Correlation: 0.8858
+
+Skills for tau_13
+R^2: 0.7662
+Correlation: 0.8756
+
+Skills for tau_22
+R^2: 0.8095
+Correlation: 0.9006
+
+Skills for tau_23
+R^2: 0.6858
+Correlation: 0.8287
+
+Skills for tau_33
+R^2: 0.5195
+Correlation: 0.8175
+
+Validation data
+Skills for tau_11
+R^2: 0.9684
+Correlation: 0.9843
+
+Skills for tau_12
+R^2: 0.7850
+Correlation: 0.8863
+
+Skills for tau_13
+R^2: 0.7668
+Correlation: 0.8759
+
+Skills for tau_22
+R^2: 0.8078
+Correlation: 0.8998
+
+Skills for tau_23
+R^2: 0.6882
+Correlation: 0.8301
+
+Skills for tau_33
+R^2: 0.5235
+Correlation: 0.8163
+
+Train data
+Skills for tau_11
+R^2: 0.9567
+Correlation: 0.9783
+
+Skills for tau_12
+R^2: 0.7907
+Correlation: 0.8901
+
+Skills for tau_13
+R^2: 0.7557
+Correlation: 0.8705
+
+Skills for tau_22
+R^2: 0.8829
+Correlation: 0.9418
+
+Skills for tau_23
+R^2: 0.7562
+Correlation: 0.8702
+
+Skills for tau_33
+R^2: 0.5029
+Correlation: 0.7282
+
+Train Files:
+<xarray.Dataset>
+Dimensions:  (z: 64, y: 32, x: 32, time: 44)
+Coordinates:
+  * z        (z) float64 0.5648 0.8473 1.13 1.412 ... 17.51 17.79 18.07 18.36
+  * y        (y) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * x        (x) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * time     (time) int64 590200 590400 590600 590800 ... 608000 609000 610000
+Data variables: (12/14)
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    ...       ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    ub       (z, y, x, time) float64 ...
+    vb       (z, y, x, time) float64 ...
+    wb       (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+<xarray.Dataset>
+Dimensions:  (z: 64, y: 32, x: 32, time: 3)
+Coordinates:
+  * z        (z) float64 0.5648 0.8473 1.13 1.412 ... 17.51 17.79 18.07 18.36
+  * y        (y) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * x        (x) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * time     (time) int64 1368000 1377000 1386000
+Data variables:
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    tau12    (z, y, x, time) float64 ...
+    tau13    (z, y, x, time) float64 ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+output shape is (348706, 6)
+input shape should be (348706, 4, 3, 3, 3)
+input shape to do 3rd dimension as channel in R2Conv is (348706, 12, 3, 3)
+Test Files:
+<xarray.Dataset>
+Dimensions:  (z: 64, y: 32, x: 32, time: 15)
+Coordinates:
+  * z        (z) float64 0.5648 0.8473 1.13 1.412 ... 17.51 17.79 18.07 18.36
+  * y        (y) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * x        (x) float64 0.4279 1.284 2.14 2.995 ... 24.39 25.25 26.1 26.96
+  * time     (time) int64 616000 617000 618000 619000 ... 628000 629000 630000
+Data variables: (12/14)
+    u        (z, y, x, time) float64 ...
+    v        (z, y, x, time) float64 ...
+    w        (z, y, x, time) float64 ...
+    tau11    (z, y, x, time) float64 ...
+    tau22    (z, y, x, time) float64 ...
+    tau33    (z, y, x, time) float64 ...
+    ...       ...
+    tau23    (z, y, x, time) float64 ...
+    b        (z, y, x, time) float64 ...
+    ub       (z, y, x, time) float64 ...
+    vb       (z, y, x, time) float64 ...
+    wb       (z, y, x, time) float64 ...
+    p        (z, y, x, time) float64 ...
+output shape is (281585, 6)
+input shape should be (281585, 4, 3, 3, 3)
+input shape to do 3rd dimension as channel in R2Conv is (281585, 12, 3, 3)
+Lossweights:
+[ 203389.8701  880790.1881 3361101.7353  428500.3204 5058449.9804 2774089.3414]
+0
+[0.01]
+LR:  None
+train loss: 0.2271314546615955
+validation loss: 0.1310442896960332
+test loss: 0.13097173964586722
+1
+[0.001]
+LR:  None
+train loss: 0.21138859772358165
+validation loss: 0.11989284003503942
+test loss: 0.1198009284440762
+2
+[0.0001]
+LR:  None
+train loss: 0.20937434038611719
+validation loss: 0.1195075175838494
+test loss: 0.11950965688530965
+3
+[0.0001]
+LR:  None
+train loss: 0.20883765407211152
+validation loss: 0.11925682232888621
+test loss: 0.11924777868191701
+4
+[0.0001]
+LR:  None
+train loss: 0.20821524987097037
+validation loss: 0.11901041955738854
+test loss: 0.11900176147494965
+5
+[0.0001]
+LR:  None
+train loss: 0.20762056041679208
+validation loss: 0.11897236381416408
+test loss: 0.11897161540603024
+6
+[0.0001]
+LR:  None
+train loss: 0.20709310852508744
+validation loss: 0.11937682785027069
+test loss: 0.1193413377529514
+7
+[0.0001]
+LR:  None
+train loss: 0.20653507241347843
+validation loss: 0.11912041415990685
+test loss: 0.11915445660915616
+8
+[0.0001]
+LR:  None
+train loss: 0.20605244675856324
+validation loss: 0.11969551475891085
+test loss: 0.11972044116918634
+9
+[0.0001]
+LR:  None
+train loss: 0.20542584101482533
+validation loss: 0.11981524147454617
+test loss: 0.11982201072579447
+10
+[0.0001]
+LR:  None
+train loss: 0.20485739430685299
+validation loss: 0.11918312999241792
+test loss: 0.11920423461831657
+11
+[0.0001]
+LR:  None
+train loss: 0.20433356436053804
+validation loss: 0.11929776653255397
+test loss: 0.11926724893782356
+12
+[0.0001]
+LR:  None
+train loss: 0.20374226491282593
+validation loss: 0.11964381980903004
+test loss: 0.1196917842983909
+13
+[0.0001]
+LR:  None
+train loss: 0.20317383882895387
+validation loss: 0.11950113060712217
+test loss: 0.11952100191711308
+14
+[0.0001]
+LR:  None
+train loss: 0.20257541617337543
+validation loss: 0.11962563783376708
+test loss: 0.1197287638209926
+15
+[0.0001]
+LR:  None
+train loss: 0.20212403316152786
+validation loss: 0.11966017710593642
+test loss: 0.11974857008014171
+16
+[0.0001]
+LR:  None
+train loss: 0.20156232682442454
+validation loss: 0.11997753556162873
+test loss: 0.12007012214961195
+17
+[0.0001]
+LR:  None
+train loss: 0.2008907976619592
+validation loss: 0.11976409510241041
+test loss: 0.11985621758775929
+18
+[0.0001]
+LR:  None
+train loss: 0.20038246277423757
+validation loss: 0.11948920492704836
+test loss: 0.11963909618528445
+19
+[0.0001]
+LR:  None
+train loss: 0.19977410745498694
+validation loss: 0.11986579838215727
+test loss: 0.11996151769296003
+20
+[0.0001]
+LR:  None
+train loss: 0.19910734418044165
+validation loss: 0.12019067859333277
+test loss: 0.12028458232391885
+21
+[0.0001]
+LR:  None
+train loss: 0.19856278069928318
+validation loss: 0.12025118104524486
+test loss: 0.12035673928248354
+22
+[0.0001]
+LR:  None
+train loss: 0.1980164256204813
+validation loss: 0.11983352115146922
+test loss: 0.11988076368698014
+23
+[0.0001]
+LR:  None
+train loss: 0.1974625056649201
+validation loss: 0.12025541107084113
+test loss: 0.12036544111794166
+24
+[0.0001]
+LR:  None
+train loss: 0.19682401005651776
+validation loss: 0.12041103846054803
+test loss: 0.12050883001462503
+25
+[0.0001]
+LR:  None
+train loss: 0.19623179307552943
+validation loss: 0.12055800987645882
+test loss: 0.1206445817258657
+ES epoch: 5
+Test data
+Skills for tau_11
+R^2: 0.9655
+Correlation: 0.9827
+
+Skills for tau_12
+R^2: 0.7835
+Correlation: 0.8855
+
+Skills for tau_13
+R^2: 0.7686
+Correlation: 0.8770
+
+Skills for tau_22
+R^2: 0.7827
+Correlation: 0.8865
+
+Skills for tau_23
+R^2: 0.6856
+Correlation: 0.8285
+
+Skills for tau_33
+R^2: 0.5240
+Correlation: 0.8153
+
+Validation data
+Skills for tau_11
+R^2: 0.9692
+Correlation: 0.9846
+
+Skills for tau_12
+R^2: 0.7831
+Correlation: 0.8853
+
+Skills for tau_13
+R^2: 0.7626
+Correlation: 0.8736
+
+Skills for tau_22
+R^2: 0.8018
+Correlation: 0.8960
+
+Skills for tau_23
+R^2: 0.6853
+Correlation: 0.8283
+
+Skills for tau_33
+R^2: 0.5359
+Correlation: 0.8159
+
+Train data
+Skills for tau_11
+R^2: 0.9558
+Correlation: 0.9780
+
+Skills for tau_12
+R^2: 0.7784
+Correlation: 0.8832
+
+Skills for tau_13
+R^2: 0.7522
+Correlation: 0.8691
+
+Skills for tau_22
+R^2: 0.8771
+Correlation: 0.9386
+
+Skills for tau_23
+R^2: 0.7438
+Correlation: 0.8630
+
+Skills for tau_33
+R^2: 0.4761
+Correlation: 0.7101
+
+[[0.984  0.885  0.8768 0.8959 0.8286 0.812 ]
+ [0.9841 0.8872 0.8735 0.898  0.8302 0.8118]
+ [0.9842 0.8874 0.8791 0.9019 0.829  0.8165]
+ [0.9847 0.8858 0.8756 0.9006 0.8287 0.8175]
+ [0.9827 0.8855 0.877  0.8865 0.8285 0.8153]]
+[[0.9682 0.7826 0.7677 0.8005 0.6848 0.5174]
+ [0.9683 0.7868 0.7624 0.8044 0.6882 0.5049]
+ [0.9685 0.7866 0.7725 0.8128 0.6862 0.5092]
+ [0.9691 0.7841 0.7662 0.8095 0.6858 0.5195]
+ [0.9655 0.7835 0.7686 0.7827 0.6856 0.524 ]]
+tau_11 avg. R^2 is 0.9679515735875219 +/- 0.0012523638795229979
+tau_12 avg. R^2 is 0.784743464447569 +/- 0.0016800170443977646
+tau_13 avg. R^2 is 0.7674894851281254 +/- 0.003275921958038573
+tau_22 avg. R^2 is 0.8019567926798243 +/- 0.010503296729932016
+tau_23 avg. R^2 is 0.6860983316028362 +/- 0.0011364469066404387
+tau_33 avg. R^2 is 0.5149980405722218 +/- 0.006968518343647711
+Overall avg. R^2 is 0.7538729480030163 +/- 0.0017094658104178848
